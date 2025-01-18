@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\SubjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\SubjectResource\RelationManagers;
+use App\Filament\Resources\SubjectResource\RelationManagers\NotesRelationManager;
 use App\Filament\Resources\SubjectResource\RelationManagers\TopicsRelationManager;
 
 class SubjectResource extends Resource
@@ -71,6 +72,7 @@ class SubjectResource extends Resource
     {
         return [
             TopicsRelationManager::class,
+            NotesRelationManager::class,
         ];
     }
 

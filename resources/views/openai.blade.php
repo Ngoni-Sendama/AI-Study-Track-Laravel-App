@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Text Generation</title>
+    <title>OpenAI Text Generator</title>
 </head>
 <body>
-    <h1>Gemini Text Generator</h1>
+    <h1>OpenAI Text Generator</h1>
 
-    <form action="{{ route('generate-text') }}" method="POST">
+    <form action="{{ route('generate-text-openai') }}" method="POST">
         @csrf
-        <label for="text">Enter Text to Generate:</label>
-        <input type="text" id="text" name="text" placeholder="Type your text here" required>
+        <label for="prompt">Enter your request:</label>
+        <textarea id="prompt" name="prompt" placeholder="Type your prompt here..." required></textarea>
 
         <button type="submit">Generate Text</button>
     </form>
