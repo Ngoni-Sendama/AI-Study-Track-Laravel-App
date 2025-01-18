@@ -63,4 +63,9 @@ class Subject extends Model
     {
         return $this->hasMany(Topic::class);
     }
+
+    public function notes()
+    {
+        return $this->hasMany(Note::class);
+    }
 }
