@@ -22,6 +22,11 @@ class Subject extends Model
                 $subject->processSyllabus();
             }
         });
+        static::deleting(function ($subject) {
+            // Delete all topics related to this subject before deleting the subject
+            $subject->topics()->delete();
+            Storage::delete($subject->getOriginal('syllabus'));
+        });
     }
 
     public function processSyllabus()
@@ -53,9 +58,6 @@ class Subject extends Model
             ]);
         }
     }
-
-
-
 
     public function topics()
     {
