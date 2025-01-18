@@ -20,9 +20,9 @@ class NotesRelationManager extends RelationManager
             ->schema([
                 Forms\Components\FileUpload::make('note_content')
                     ->required()
+                    ->columnSpanFull()
                     ->preserveFilenames()
-                    ->directory('notes')
-                    ->maxLength(255),
+                    ->directory('notes'),
             ]);
     }
 
