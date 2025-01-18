@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\SubjectResource\Pages;
-use App\Filament\Resources\SubjectResource\RelationManagers;
-use App\Models\Subject;
+use App\Filament\Resources\TopicResource\Pages;
+use App\Filament\Resources\TopicResource\RelationManagers;
+use App\Models\Topic;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -13,9 +13,9 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class SubjectResource extends Resource
+class TopicResource extends Resource
 {
-    protected static ?string $model = Subject::class;
+    protected static ?string $model = Topic::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -23,14 +23,12 @@ class SubjectResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
-                    ->columnSpanFull()
+                Forms\Components\Select::make('subject_id')
+                    ->relationship('subject', 'name')
                     ->required(),
-                Forms\Components\FileUpload::make('syllabus')
-                    ->columnSpanFull()
-                    ->preserveFilenames()
-                    ->directory('syllabus')
-                    ->required(),
+                Forms\Components\TextInput::make('unit'),
+                Forms\Components\Textarea::make('topics')
+                    ->columnSpanFull(),
             ]);
     }
 
@@ -38,9 +36,10 @@ class SubjectResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('syllabus')
+                Tables\Columns\TextColumn::make('subject.name')
+                    ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('unit')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -75,10 +74,10 @@ class SubjectResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListSubjects::route('/'),
-            'create' => Pages\CreateSubject::route('/create'),
-            'view' => Pages\ViewSubject::route('/{record}'),
-            'edit' => Pages\EditSubject::route('/{record}/edit'),
+            'index' => Pages\ListTopics::route('/'),
+            'create' => Pages\CreateTopic::route('/create'),
+            'view' => Pages\ViewTopic::route('/{record}'),
+            'edit' => Pages\EditTopic::route('/{record}/edit'),
         ];
     }
 }
