@@ -9,6 +9,7 @@ use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
+use Devonab\FilamentEasyFooter\EasyFooterPlugin;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Filament\Http\Middleware\AuthenticateSession;
 use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
@@ -36,14 +37,22 @@ class DashPanelProvider extends PanelProvider
             ->plugins([
                 FilamentApexChartsPlugin::make(),
                 FilamentNordThemePlugin::make(),
-            
+
                 AuthUIEnhancerPlugin::make()
-                ->mobileFormPanelPosition('bottom')
-                ->formPanelPosition('left')
-                ->formPanelWidth('80%')
-                ->formPanelBackgroundColor(Color::Zinc, '300')
-                ->emptyPanelBackgroundImageOpacity('80%')
-                ->emptyPanelBackgroundImageUrl(asset('images/study.jpg'))
+                    ->mobileFormPanelPosition('bottom')
+                    ->formPanelPosition('left')
+                    ->formPanelWidth('80%')
+                    ->formPanelBackgroundColor(Color::Zinc, '300')
+                    ->emptyPanelBackgroundImageOpacity('80%')
+                    ->emptyPanelBackgroundImageUrl(asset('images/study.jpg')),
+
+                EasyFooterPlugin::make()
+                    ->footerEnabled()
+                    ->withFooterPosition('sidebar.footer')
+                    ->withLogo('https://static.cdnlogo.com/logos/l/23/laravel.svg', 'https://laravel.com')
+                    ->withLinks([
+                        ['title' => 'Created By Code With Ngoni', 'url' => 'https://codewithngoni.com/'],
+                    ])  
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
