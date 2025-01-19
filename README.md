@@ -7,12 +7,15 @@
 - [x] Manage Subjects
 - [x] Manage Syllabus
 - [x] Generate Units and Topics from Syllabus automatically
+- [ ] Media View
 - [ ] Manage Notes
 - [ ] Study Session Page, Mark Syllabus, units, topics and notes
 - [ ] Generate Flashcard using AI (OpenAI or Geminni) only key points
 - [ ] Summarize Notes using AI
 - [ ] Allow users to select subject, units, topics, notes, exam date, and duration. Generate MCQs exams using AI, (Input: Subject, units, topics, notes.)
+- [ ] Exam Topics and Units options selection [Check](https://filamentphp.com/plugins/novadaemon-combobox)
 - [ ] Exam interface, Multiple choice loop
+- [ ] Progress checking [Check](https://filamentphp.com/plugins/ibrahim-bougaoua-filaprogress)
 - [ ] Mark answers, and generate scores
 - [ ] Use AI to show weak areas (units/topics with poor performance). And Study Recommendations
 - [ ] Exams Perfomance, Subject Perfomance, Best Marks Perfomance, Next Date Exam, Topics with weaknesses

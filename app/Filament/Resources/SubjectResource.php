@@ -9,10 +9,12 @@ use App\Models\Subject;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Support\Enums\Alignment;
 use Filament\Tables\Columns\Layout\Stack;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\SubjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Hugomyb\FilamentMediaAction\Tables\Actions\MediaAction;
 use App\Filament\Resources\SubjectResource\RelationManagers;
 use App\Filament\Resources\SubjectResource\RelationManagers\NotesRelationManager;
 use App\Filament\Resources\SubjectResource\RelationManagers\TopicsRelationManager;
@@ -46,7 +48,8 @@ class SubjectResource extends Resource
             ->columns([
                 Stack::make([
                     Tables\Columns\TextColumn::make('name')
-                        ->searchable(),                   
+                        ->searchable(),
+
                 ]),
             ])
             ->contentGrid([
@@ -57,6 +60,12 @@ class SubjectResource extends Resource
                 //
             ])
             ->actions([
+                MediaAction::make('syllabus')
+                    ->modalHeading(fn($record) => $record->name)
+                    ->modalFooterActionsAlignment(Alignment::Center)
+                    ->icon('bi-file-earmark-pdf-fill')
+                    ->iconButton()
+                    ->media(fn($record) => asset('storage/' . $record->syllabus)),
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
