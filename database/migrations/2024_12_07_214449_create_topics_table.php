@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('subject_id');
             $table->string('unit')->nullable();
-            $table->json('topics')->nullable();
+            $table->string('topics')->nullable();
             $table->timestamps();
         });
     }

@@ -21,5 +21,4 @@ Route::post('/question', [GeminiController::class, 'index']);
 Route::get('/openai', [OpenController::class, 'showForm'])->name('openai.form');
 Route::post('/generate-text-openai', [OpenController::class, 'generateText'])->name('generate-text-openai');
 
-Route::get('exam', [ExamController::class, 'index']);
-Route::get('get-topics-and-notes-by-subject', [ExamController::class, 'getTopicsAndNotesBySubject']);
+Route::get('/exams/{exam}', [ExamController::class, 'generateExamQuestions']);

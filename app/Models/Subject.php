@@ -43,7 +43,7 @@ class Subject extends Model
         $parser = new \Smalot\PdfParser\Parser();
         $pdf = $parser->parseFile($filePath);
         $content = $pdf->getText();
-        
+
         // Extract units and topics
         preg_match_all('/Unit (\w+)\s+(.*?)(?=(Unit \w+|$))/s', $content, $matches, PREG_SET_ORDER);
 
@@ -54,7 +54,7 @@ class Subject extends Model
             // Save the unit and topics to the database
             $this->topics()->create([
                 'unit' => $unit,
-                'topics' => explode("\n", trim($topicsText)),
+                'topics' => implode(',', array_map('trim', explode("\n", trim($topicsText)))), // Convert array to string
             ]);
         }
     }

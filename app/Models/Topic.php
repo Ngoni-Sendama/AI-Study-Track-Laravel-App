@@ -13,18 +13,6 @@ class Topic extends Model
         'topics',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
-    {
-        return [
-            'topics' => 'array',
-        ];
-    }
-
     public function subject(): BelongsTo
     {
         return $this->belongsTo(Subject::class);

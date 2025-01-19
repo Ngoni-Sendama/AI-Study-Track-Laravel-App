@@ -2,18 +2,21 @@
 
 namespace App\Models;
 
+use GeminiAPI\Client;
+use GeminiAPI\Resources\Parts\TextPart;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Log;
 
 class Exam extends Model
 {
-    protected $fillable=[
+    protected $fillable = [
         'subject_id',
         'topics',
         'notes',
         'date'
     ];
 
-     /**
+    /**
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -24,15 +27,24 @@ class Exam extends Model
             'topics' => 'array',
             'notes' => 'array',
         ];
-    
     }
 
     public function answer()
     {
         return $this->belongsTo(ExamAnswer::class);
     }
-    public function question()
+    public function questions()
     {
         return $this->hasMany(ExamQuestion::class);
     }
+    public function subject()
+    {
+        return $this->belongsTo(Subject::class);
+    }
+
+    
+
+
+
+
 }

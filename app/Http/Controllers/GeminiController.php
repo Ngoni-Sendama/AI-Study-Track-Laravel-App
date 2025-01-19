@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 
 class GeminiController extends Controller
 {
+    
     public function index(Request $request)
     {
         $request->validate([
