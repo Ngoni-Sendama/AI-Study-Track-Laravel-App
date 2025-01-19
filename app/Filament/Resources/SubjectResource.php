@@ -13,15 +13,16 @@ use Filament\Resources\Resource;
 use Filament\Support\Enums\Alignment;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Checkbox;
+use Filament\Forms\Components\Repeater;
 use Filament\Tables\Columns\Layout\Stack;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\SubjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Hugomyb\FilamentMediaAction\Tables\Actions\MediaAction;
 use App\Filament\Resources\SubjectResource\RelationManagers;
+use Joaopaulolndev\FilamentPdfViewer\Forms\Components\PdfViewerField;
 use App\Filament\Resources\SubjectResource\RelationManagers\NotesRelationManager;
 use App\Filament\Resources\SubjectResource\RelationManagers\TopicsRelationManager;
-use Filament\Forms\Components\Repeater;
 
 class SubjectResource extends Resource
 {
@@ -37,9 +38,14 @@ class SubjectResource extends Resource
                     ->columnSpanFull()
                     ->disabledOn('edit')
                     ->required(),
+                PdfViewerField::make('syllabus')
+                    ->label('Syllabus Preview')
+                    ->minHeight('70svh')
+                    ->columnSpanFull()
+                    ->visible((fn($record) => $record->syllabus)),
                 Forms\Components\FileUpload::make('syllabus')
                     ->columnSpanFull()
-                    ->disabledOn('edit')
+                    ->visibleOn('create')
                     ->preserveFilenames()
                     ->directory('syllabus')
                     ->hidden(fn(Get $get): bool =>  $get('custom_topics')),
