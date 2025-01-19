@@ -31,8 +31,7 @@ class TopicsRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('unit')
             ->columns([
-                Tables\Columns\TextColumn::make('unit')
-                    ->searchable(),
+                Tables\Columns\TextColumn::make('unit'),
                     Tables\Columns\TextColumn::make('topics')
                     ->wrap(),
             ])

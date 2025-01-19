@@ -3,12 +3,14 @@
 namespace App\Filament\Resources\SubjectResource\RelationManagers;
 
 use Filament\Forms;
-use Filament\Forms\Form;
-use Filament\Resources\RelationManagers\RelationManager;
 use Filament\Tables;
+use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\Storage;
+use Filament\Tables\Columns\Layout\Split;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Filament\Resources\RelationManagers\RelationManager;
 
 class NotesRelationManager extends RelationManager
 {
@@ -23,6 +25,7 @@ class NotesRelationManager extends RelationManager
                     ->columnSpanFull()
                     ->preserveFilenames()
                     ->directory('notes'),
+                
             ]);
     }
 
@@ -31,7 +34,14 @@ class NotesRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('note_content')
             ->columns([
-                Tables\Columns\TextColumn::make('note_content'),
+                Split::make([
+                    Tables\Columns\TextColumn::make('note_content'),
+
+                ])
+            ])
+            ->contentGrid([
+                'md' => 2,
+                'xl' => 4,
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make()

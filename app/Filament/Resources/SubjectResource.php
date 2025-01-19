@@ -9,6 +9,7 @@ use App\Models\Subject;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Tables\Columns\Layout\Stack;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\SubjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -28,9 +29,11 @@ class SubjectResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->columnSpanFull()
+                    ->disabledOn('edit')
                     ->required(),
                 Forms\Components\FileUpload::make('syllabus')
                     ->columnSpanFull()
+                    ->disabledOn('edit')
                     ->preserveFilenames()
                     ->directory('syllabus')
                     ->required(),
@@ -41,18 +44,14 @@ class SubjectResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('syllabus')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                Stack::make([
+                    Tables\Columns\TextColumn::make('name')
+                        ->searchable(),                   
+                ]),
+            ])
+            ->contentGrid([
+                'md' => 2,
+                'xl' => 4,
             ])
             ->filters([
                 //
