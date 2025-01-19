@@ -7,8 +7,8 @@
 - [x] Manage Subjects
 - [x] Manage Syllabus
 - [x] Generate Units and Topics from Syllabus automatically
-- [ ] Media View
-- [ ] Manage Notes
+- [x] Media View
+- [x] Manage Notes
 - [ ] Study Session Page, Mark Syllabus, units, topics and notes
 - [ ] Generate Flashcard using AI (OpenAI or Geminni) only key points
 - [ ] Summarize Notes using AI

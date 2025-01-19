@@ -43,7 +43,7 @@ class Subject extends Model
         $parser = new \Smalot\PdfParser\Parser();
         $pdf = $parser->parseFile($filePath);
         $content = $pdf->getText();
-
+        
         // Extract units and topics
         preg_match_all('/Unit (\w+)\s+(.*?)(?=(Unit \w+|$))/s', $content, $matches, PREG_SET_ORDER);
 

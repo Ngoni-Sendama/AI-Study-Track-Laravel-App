@@ -6,10 +6,13 @@ namespace App\Filament\Resources;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Subject;
+use Filament\Forms\Get;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
 use Filament\Support\Enums\Alignment;
+use Filament\Forms\Components\Section;
+use Filament\Forms\Components\Checkbox;
 use Filament\Tables\Columns\Layout\Stack;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\SubjectResource\Pages;
@@ -18,6 +21,7 @@ use Hugomyb\FilamentMediaAction\Tables\Actions\MediaAction;
 use App\Filament\Resources\SubjectResource\RelationManagers;
 use App\Filament\Resources\SubjectResource\RelationManagers\NotesRelationManager;
 use App\Filament\Resources\SubjectResource\RelationManagers\TopicsRelationManager;
+use Filament\Forms\Components\Repeater;
 
 class SubjectResource extends Resource
 {
@@ -38,7 +42,24 @@ class SubjectResource extends Resource
                     ->disabledOn('edit')
                     ->preserveFilenames()
                     ->directory('syllabus')
-                    ->required(),
+                    ->hidden(fn(Get $get): bool =>  $get('custom_topics')),
+                Checkbox::make('custom_topics')
+                    ->hint('Add Topics')
+                    ->visibleOn('create')
+                    ->live(),
+                Repeater::make('topics')
+                    ->visibleOn('create')
+                    ->columnSpanFull()
+                    ->columns(2)
+                    ->visible(fn(Get $get): bool => $get('custom_topics'))
+                    ->relationship()
+                    ->schema([
+                        Forms\Components\TextInput::make('unit')
+                            ->required()
+                            ->maxLength(255),
+                        Forms\Components\Textarea::make('topics'),
+                    ]),
+
             ]);
     }
 
@@ -65,7 +86,8 @@ class SubjectResource extends Resource
                     ->modalFooterActionsAlignment(Alignment::Center)
                     ->icon('bi-file-earmark-pdf-fill')
                     ->iconButton()
-                    ->media(fn($record) => asset('storage/' . $record->syllabus)),
+                    ->media(fn($record) => asset('storage/' . $record->syllabus))
+                    ->visible((fn($record) => $record->syllabus)),
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
             ])
