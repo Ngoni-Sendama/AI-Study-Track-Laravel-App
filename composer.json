@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "andreia/filament-nord-theme": "^1.0",
+        "diogogpinto/filament-auth-ui-enhancer": "^1.0",
         "filament/filament": "^3.2",
         "gemini-api-php/client": "^1.7",
         "laravel/framework": "^11.31",

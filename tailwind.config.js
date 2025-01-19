@@ -8,6 +8,7 @@ export default {
         './resources/**/*.blade.php',
         './resources/**/*.js',
         './resources/**/*.vue',
+        './vendor/diogogpinto/filament-auth-ui-enhancer/resources/**/*.blade.php',
     ],
     theme: {
         extend: {

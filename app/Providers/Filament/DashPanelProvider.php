@@ -11,14 +11,15 @@ use Filament\Http\Middleware\Authenticate;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Filament\Http\Middleware\AuthenticateSession;
+use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
 use Illuminate\Routing\Middleware\SubstituteBindings;
+use Andreia\FilamentNordTheme\FilamentNordThemePlugin;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
-use Andreia\FilamentNordTheme\FilamentNordThemePlugin;
 
 class DashPanelProvider extends PanelProvider
 {
@@ -34,7 +35,15 @@ class DashPanelProvider extends PanelProvider
             ])
             ->plugins([
                 FilamentApexChartsPlugin::make(),
-                FilamentNordThemePlugin::make()
+                FilamentNordThemePlugin::make(),
+            
+                AuthUIEnhancerPlugin::make()
+                ->mobileFormPanelPosition('bottom')
+                ->formPanelPosition('left')
+                ->formPanelWidth('80%')
+                ->formPanelBackgroundColor(Color::Zinc, '300')
+                ->emptyPanelBackgroundImageOpacity('80%')
+                ->emptyPanelBackgroundImageUrl(asset('images/study.jpg'))
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
