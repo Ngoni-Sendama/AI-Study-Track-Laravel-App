@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExamController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GeminiController;
 use App\Http\Controllers\OpenController;
@@ -20,3 +21,5 @@ Route::post('/question', [GeminiController::class, 'index']);
 Route::get('/openai', [OpenController::class, 'showForm'])->name('openai.form');
 Route::post('/generate-text-openai', [OpenController::class, 'generateText'])->name('generate-text-openai');
 
+Route::get('exam', [ExamController::class, 'index']);
+Route::get('get-topics-and-notes-by-subject', [ExamController::class, 'getTopicsAndNotesBySubject']);

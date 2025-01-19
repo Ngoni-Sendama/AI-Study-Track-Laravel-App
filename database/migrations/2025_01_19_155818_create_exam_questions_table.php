@@ -11,12 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exams', function (Blueprint $table) {
+        Schema::create('exam_questions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('subject_id');
-            $table->json('topics')->nullable(); // To store referenced topic IDs.
-            $table->json('notes')->nullable(); // To store referenced note IDs.
-            $table->dateTime('date')->nullable();
+            $table->unsignedBigInteger('exam_id');
+            $table->text('question');
+            $table->string('option_a');
+            $table->string('option_b');
+            $table->string('option_c');
+            $table->string('option_d');
+            $table->char('correct_option', 1);
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('exams');
+        Schema::dropIfExists('exam_questions');
     }
 };
