@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Text Generation</title>
+    <title>PDF to Text Generation</title>
 </head>
 <body>
-    <h1>Gemini Text Generator</h1>
+    <h1>PDF to Text</h1>
 
-    <form action="{{ route('generate-text') }}" method="POST">
+    <form action="{{ url('convert-pdf') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <label for="text">Enter Text to Generate:</label>
-        <input type="text" id="text" name="text" placeholder="Type your text here" required>
-
-        <button type="submit">Generate Text</button>
+        <input type="file" name="pdf" accept="application/pdf" required>
+        <button type="submit">Upload PDF</button>
     </form>
+    
 
     @if(session('generated_text'))
         <div>
