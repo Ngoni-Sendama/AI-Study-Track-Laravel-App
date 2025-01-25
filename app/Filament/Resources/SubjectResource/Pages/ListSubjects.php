@@ -16,13 +16,6 @@ class ListSubjects extends ListRecords
             Actions\CreateAction::make(),
         ];
     }
-    public function hasCombinedRelationManagerTabsWithContent(): bool
-    {
-        return true;
-    }
-    public function getContentTabLabel(): ?string
-    {
-        return 'Subject Data';
-    }
-    
+   
+
 }
