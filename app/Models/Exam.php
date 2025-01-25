@@ -29,22 +29,21 @@ class Exam extends Model
         ];
     }
 
-    public function answer()
-    {
-        return $this->belongsTo(ExamAnswer::class);
-    }
-    public function questions()
-    {
-        return $this->hasMany(ExamQuestion::class);
-    }
+    // public function answer()
+    // {
+    //     return $this->belongsTo(ExamAnswer::class);
+    // }
+    // public function questions()
+    // {
+    //     return $this->hasMany(ExamQuestion::class);
+    // }
     public function subject()
     {
         return $this->belongsTo(Subject::class);
     }
-
-    
-
-
-
-
+    // Updates
+    public function questionSets()
+    {
+        return $this->hasMany(QuestionSet::class);
+    }
 }

@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('exam_questions', function (Blueprint $table) {
+        Schema::create('question_sets', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('exam_id');
-            $table->text('question');
-            $table->string('option_a');
-            $table->string('option_b');
-            $table->string('option_c');
-            $table->string('option_d');
-            $table->char('correct_option', 1);
+            $table->foreignId('exam_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -29,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('exam_questions');
+        Schema::dropIfExists('question_sets');
     }
 };
