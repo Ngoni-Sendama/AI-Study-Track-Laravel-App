@@ -29,6 +29,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ExamResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ExamResource\RelationManagers;
+use App\Filament\Resources\ExamResource\Widgets\MarksStats;
 
 class ExamResource extends Resource
 {
@@ -146,6 +147,12 @@ class ExamResource extends Resource
             return ['success' => false, 'message' => 'An unexpected error occurred.'];
         }
     }
+    public static function getWidgets(): array
+    {
+        return [
+            MarksStats::class,  // Adding the custom stats widget
+        ];
+    }
 
 
     public static function table(Table $table): Table
@@ -237,12 +244,7 @@ class ExamResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
+
 
     public static function getPages(): array
     {

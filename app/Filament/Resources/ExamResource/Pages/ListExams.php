@@ -9,15 +9,26 @@ use Filament\Resources\Components\Tab;
 use App\Filament\Resources\ExamResource;
 use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Builder;
+use Filament\Pages\Concerns\ExposesTableToWidgets;
+use App\Filament\Resources\ExamResource\Widgets\MarksStats;
 
 class ListExams extends ListRecords
 {
+    use ExposesTableToWidgets;
+
     protected static string $resource = ExamResource::class;
 
     protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make(),
+        ];
+    }
+
+    public function getHeaderWidgets(): array
+    {
+        return [
+            MarksStats::class,  // Ensure the widget is exposed in the header or main content area
         ];
     }
 
