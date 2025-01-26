@@ -11,41 +11,47 @@ use Illuminate\Support\Facades\Log;
 class Note extends Model
 {
     use SoftDeletes;
-    
+
     protected $fillable = ['subject_id', 'note_content'];
 
     public function subject(): BelongsTo
     {
         return $this->belongsTo(Subject::class);
     }
-      /**
-     * Create a new note and log the cleaned text from the PDF.
-     *
-     * @param array $attributes
-     * @return \Illuminate\Database\Eloquent\Model
+
+    /**
+     * Boot method to handle model events.
      */
-    public static function create(array $attributes = [])
+    protected static function boot()
     {
-        // Get the path of the PDF file from 'note_content'
-        $pdfPath = $attributes['note_content'];
+        parent::boot();
 
-        // Initialize the PDF parser
-        $parser = new Parser();
+        // Listen for the creating event
+        static::creating(function ($note) {
+            // Resolve the full PDF file path
+            $pdfPath = storage_path('app/public/' . $note->note_content);
 
-        // Parse the PDF to get text content
-        $pdf = $parser->parseFile($pdfPath);
-        $text = $pdf->getText();
+            if (file_exists($pdfPath)) {
+                try {
+                    // Parse the PDF
+                    $parser = new Parser();
+                    $pdf = $parser->parseFile($pdfPath);
+                    $text = $pdf->getText();
 
-        // Clean up the text: replace newlines with spaces
-        $cleanText = str_replace(["\n", "\r"], ' ', $text);
+                    // Clean the extracted text
+                    $cleanText = str_replace(["\n", "\r"], ' ', $text);
+                    $cleanText = preg_replace('/\s+/', ' ', $cleanText);
 
-        // Optionally, condense multiple spaces into one
-        $cleanText = preg_replace('/\s+/', ' ', $cleanText);
-
-        // Log the cleaned text (you can adjust the log level as needed)
-        Log::info('Cleaned PDF Text: ', ['text' => $cleanText]);
-
-        // Call the parent create method to create the note (if you still want to create the note)
-        return parent::create($attributes);
+                    // Log the cleaned text
+                    Log::info('Cleaned PDF Text: ', ['text' => $cleanText]);
+                } catch (\Exception $e) {
+                    // Log any errors during parsing
+                    Log::error('Failed to parse PDF: ' . $e->getMessage());
+                }
+            } else {
+                // Log an error if the file does not exist
+                Log::error('PDF file not found: ' . $pdfPath);
+            }
+        });
     }
 }

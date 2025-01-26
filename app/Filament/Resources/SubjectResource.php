@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Filament\Resources;
+
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Subject;
@@ -7,6 +9,8 @@ use Filament\Forms\Get;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Illuminate\Support\Facades\Auth;
+use Filament\Forms\Components\Hidden;
 use Filament\Support\Enums\Alignment;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Checkbox;
@@ -20,14 +24,17 @@ use App\Filament\Resources\SubjectResource\RelationManagers;
 use Joaopaulolndev\FilamentPdfViewer\Forms\Components\PdfViewerField;
 use App\Filament\Resources\SubjectResource\RelationManagers\NotesRelationManager;
 use App\Filament\Resources\SubjectResource\RelationManagers\TopicsRelationManager;
+
 class SubjectResource extends Resource
 {
     protected static ?string $model = Subject::class;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'healthicons-o-register-book';
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Hidden::make('user_id')
+                    ->default(Auth::id()),
                 Forms\Components\TextInput::make('name')
                     ->columnSpanFull()
                     ->disabledOn('edit')

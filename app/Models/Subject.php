@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 class Subject extends Model
 {
     protected $fillable = [
+        'user_id',
         'name',
         'syllabus',
     ];
