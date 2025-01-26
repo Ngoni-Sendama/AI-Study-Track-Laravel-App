@@ -12,13 +12,15 @@ use App\Models\Subject;
 use Filament\Forms\Get;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
+use Filament\Actions\Action;
 use Filament\Resources\Resource;
 use Illuminate\Support\Collection;
+use Filament\Notifications\Notification;
 use Illuminate\Database\Eloquent\Builder;
+use Novadaemon\FilamentCombobox\Combobox;
 use App\Filament\Resources\ExamResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ExamResource\RelationManagers;
-use Filament\Actions\Action;
 
 class ExamResource extends Resource
 {
@@ -35,6 +37,16 @@ class ExamResource extends Resource
                     ->label('Subject')
                     ->live()
                     ->options(Subject::all()->pluck('name', 'id')),
+                Combobox::make('topics')
+                    ->options(
+                        fn(Get $get): Collection => Topic::query()
+                            ->where('subject_id', $get('subject_id'))
+                            ->get()
+                            ->mapWithKeys(fn($topic) => [
+                                $topic->topics => "{$topic->unit} - {$topic->topics}"
+                            ])
+                    )
+                    ->preload(),
                 Forms\Components\Select::make('topics')
                     ->multiple()
                     ->options(
@@ -83,8 +95,40 @@ class ExamResource extends Resource
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
                 Tables\Actions\Action::make('generate')
+                    ->hidden(fn(Exam $record) => $record->questionSets()->exists())
                     ->label('generate exam')
                     ->color('info')
+                    ->button()
+                    ->icon('heroicon-o-rectangle-stack')
+                    ->requiresConfirmation()
+                    ->modalHeading('Generate Examination Using AI')
+                    ->modalDescription('Are you sure you want to generate the exam?')
+                    ->action(function (Exam $record) use ($table) {
+
+
+                        // if (false === $release) {
+                        //     return Notification::make()
+                        //         ->title("Error from logs")
+                        //         ->danger()
+                        //         ->send();
+                        // }
+
+                        Notification::make()
+                            ->title("Exam has been generated successfully")
+                            ->success()
+                            ->send();
+
+                        return $table->deferLoading();
+                    }),
+                Tables\Actions\Action::make('write')
+                    ->label('write exam')
+                    ->color('warning')
+                    ->visible(fn(Exam $record) => $record->questionSets()->exists())
+                    ->button(),
+                Tables\Actions\Action::make('check')
+                    ->label('exam details')
+                    ->color('success')
+                    ->visible(fn(Exam $record) => $record->answers()->exists())
                     ->button(),
             ])
             ->bulkActions([

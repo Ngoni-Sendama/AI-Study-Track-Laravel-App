@@ -13,7 +13,8 @@ class Exam extends Model
         'subject_id',
         'topics',
         'notes',
-        'date'
+        'date',
+        'marks',
     ];
 
     /**
@@ -29,14 +30,6 @@ class Exam extends Model
         ];
     }
 
-    // public function answer()
-    // {
-    //     return $this->belongsTo(ExamAnswer::class);
-    // }
-    // public function questions()
-    // {
-    //     return $this->hasMany(ExamQuestion::class);
-    // }
     public function subject()
     {
         return $this->belongsTo(Subject::class);
@@ -45,5 +38,9 @@ class Exam extends Model
     public function questionSets()
     {
         return $this->hasMany(QuestionSet::class);
+    }
+    public function answers()
+    {
+        return $this->hasMany(ExamAnswer::class);
     }
 }

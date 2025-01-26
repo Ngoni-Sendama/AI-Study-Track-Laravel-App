@@ -17,6 +17,7 @@ return new class extends Migration
             $table->json('topics')->nullable(); // To store referenced topic IDs.
             $table->json('notes')->nullable(); // To store referenced note IDs.
             $table->dateTime('date')->nullable();
+            $table->decimal('marks', 5, 2)->nullable()->comment('Marks in percentage, ranges from 0 to 100');
             $table->timestamps();
         });
     }
