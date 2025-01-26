@@ -27,6 +27,8 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ExamResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ExamResource\RelationManagers;
+use IbrahimBougaoua\FilaProgress\Tables\Columns\CircleProgress;
+use IbrahimBougaoua\FilaProgress\Infolists\Components\CircleProgressEntry;
 
 class ExamResource extends Resource
 {
@@ -69,7 +71,7 @@ class ExamResource extends Resource
     public static function generateExamQuestions(Exam $exam): array
     {
         // Prepare the question prompt
-        $questionPrompt = "Generate 15 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'.  Use example below:
+        $questionPrompt = "Generate 50 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'.  Use example below:
             **Question 5:**
                 Iterative development involves:
                 (A) Releasing a complete software product before testing
@@ -213,14 +215,17 @@ class ExamResource extends Resource
                         return $table->deferLoading();
                     }),
                 Tables\Actions\Action::make('write')
-                    ->label('write exam')
+                    ->label('Write Exam')
                     ->color('warning')
                     ->visible(fn(Exam $record) => $record->questionSets()->exists())
+                    ->hidden(fn(Exam $record) => $record->answers()->exists())
+                    ->url(fn(Exam $record): string => route('exam-writing', ['exam' => $record->id]))
                     ->button(),
                 Tables\Actions\Action::make('check')
                     ->label('exam details')
                     ->color('success')
                     ->visible(fn(Exam $record) => $record->answers()->exists())
+                    ->url(fn(Exam $record): string => route('exam-answers', ['examId' => $record->id]))
                     ->button(),
             ])
             ->bulkActions([

@@ -14,7 +14,6 @@ use Illuminate\Cookie\Middleware\EncryptCookies;
 use Filament\Http\Middleware\AuthenticateSession;
 use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
 use Illuminate\Routing\Middleware\SubstituteBindings;
-use Andreia\FilamentNordTheme\FilamentNordThemePlugin;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -34,10 +33,9 @@ class DashPanelProvider extends PanelProvider
             ->colors([
                 'primary' => Color::Amber,
             ])
+            ->topNavigation()
             ->plugins([
                 FilamentApexChartsPlugin::make(),
-                FilamentNordThemePlugin::make(),
-
                 AuthUIEnhancerPlugin::make()
                     ->mobileFormPanelPosition('bottom')
                     ->formPanelPosition('left')
@@ -48,7 +46,8 @@ class DashPanelProvider extends PanelProvider
 
                 EasyFooterPlugin::make()
                     ->footerEnabled()
-                    ->withFooterPosition('sidebar.footer')
+                    ->withLoadTime()
+                    ->withFooterPosition('footer')
                     ->withLogo('https://static.cdnlogo.com/logos/l/23/laravel.svg', 'https://laravel.com')
                     ->withLinks([
                         ['title' => 'Created By Code With Ngoni', 'url' => 'https://codewithngoni.com/'],

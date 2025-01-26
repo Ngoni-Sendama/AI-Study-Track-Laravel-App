@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\ExamController;
+use App\Filament\Pages\ExamAnswer;
+use App\Filament\Pages\ExamWriting;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\OpenController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\ExamController;
+use App\Http\Controllers\OpenController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -17,3 +19,7 @@ Route::post('/submit-exam/{exam}', [ExamController::class, 'submitExam'])->name(
 Route::get('done',[ExamController::class, 'index'])->name('exams.index');
 
 Route::post('convert-pdf', [PDFController::class, 'convertPdfToText']);
+
+// Filament View
+Route::get('/exam-writing/{exam}', ExamWriting::class)->name('exam-writing');
+Route::get('/exam-answers/{examId}', ExamAnswer::class)->name('exam-answers');

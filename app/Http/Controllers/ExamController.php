@@ -116,6 +116,50 @@ class ExamController extends Controller
         return view('exam', compact('exam'));
     }
 
+    // public function submitExam(Request $request, $examId)
+    // {
+    //     $exam = Exam::findOrFail($examId);
+    //     $userId = Auth::id();
+
+    //     $correctAnswers = 0;
+    //     $totalQuestions = 0;
+
+    //     foreach ($exam->questionSets as $questionSet) {
+    //         foreach ($questionSet->questions as $question) {
+    //             $selectedOptionId = $request->input("question_{$question->id}");
+
+    //             if ($selectedOptionId) {
+    //                 $totalQuestions++;
+
+    //                 // Find the selected option
+    //                 $option = $question->options()->find($selectedOptionId);
+
+    //                 // Check if the selected option is correct
+    //                 $isCorrect = $option && $option->is_correct;
+
+    //                 // Store the answer in the database
+    //                 ExamAnswer::create([
+    //                     'user_id' => $userId,
+    //                     'exam_id' => $examId,
+    //                     'question_id' => $question->id,
+    //                     'option_id' => $selectedOptionId,
+    //                     'is_correct' => $isCorrect,
+    //                 ]);
+
+    //                 // Count the correct answers
+    //                 if ($isCorrect) {
+    //                     $correctAnswers++;
+    //                 }
+    //             }
+    //         }
+    //     }
+
+    //     // Calculate the score percentage
+    //     $score = ($totalQuestions > 0) ? ($correctAnswers / $totalQuestions) * 100 : 0;
+
+    //     return redirect()->route('exams.index')->with('success', "Your exam was submitted. You scored {$score}%.");
+    // } 
+
     public function submitExam(Request $request, $examId)
     {
         $exam = Exam::findOrFail($examId);
@@ -157,8 +201,13 @@ class ExamController extends Controller
         // Calculate the score percentage
         $score = ($totalQuestions > 0) ? ($correctAnswers / $totalQuestions) * 100 : 0;
 
+        // Update the marks in the Exam model
+        $exam->marks = $score;
+        $exam->save();
+
         return redirect()->route('exams.index')->with('success', "Your exam was submitted. You scored {$score}%.");
-    } 
+    }
+
 
     public function index()
     {
