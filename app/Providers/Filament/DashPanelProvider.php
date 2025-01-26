@@ -8,6 +8,7 @@ use Filament\Widgets;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
 use Filament\Http\Middleware\Authenticate;
+use Rmsramos\Activitylog\ActivitylogPlugin;
 use Illuminate\Session\Middleware\StartSession;
 use Devonab\FilamentEasyFooter\EasyFooterPlugin;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -20,6 +21,7 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use Joaopaulolndev\FilamentEditProfile\FilamentEditProfilePlugin;
 
 class DashPanelProvider extends PanelProvider
 {
@@ -36,6 +38,7 @@ class DashPanelProvider extends PanelProvider
             ->topNavigation()
             ->plugins([
                 FilamentApexChartsPlugin::make(),
+                ActivitylogPlugin::make(),
                 AuthUIEnhancerPlugin::make()
                     ->mobileFormPanelPosition('bottom')
                     ->formPanelPosition('left')
@@ -43,7 +46,6 @@ class DashPanelProvider extends PanelProvider
                     ->formPanelBackgroundColor(Color::Zinc, '300')
                     ->emptyPanelBackgroundImageOpacity('80%')
                     ->emptyPanelBackgroundImageUrl(asset('images/study.jpg')),
-
                 EasyFooterPlugin::make()
                     ->footerEnabled()
                     ->withLoadTime()
@@ -51,7 +53,16 @@ class DashPanelProvider extends PanelProvider
                     ->withLogo('https://static.cdnlogo.com/logos/l/23/laravel.svg', 'https://laravel.com')
                     ->withLinks([
                         ['title' => 'Created By Code With Ngoni', 'url' => 'https://codewithngoni.com/'],
-                    ])  
+                    ]),
+                    FilamentEditProfilePlugin::make()
+                    ->slug('my-profile')
+                    ->setTitle('My Profile')
+                    ->setNavigationLabel('My Profile')
+                    ->setIcon('healthicons-o-ui-user-profile')
+                    ->setSort(10)
+                    ->shouldShowDeleteAccountForm(false)
+                    ->shouldShowBrowserSessionsForm()
+            
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

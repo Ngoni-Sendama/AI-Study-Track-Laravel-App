@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('exams', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('subject_id');
             $table->json('topics')->nullable(); // To store referenced topic IDs.
             $table->json('notes')->nullable(); // To store referenced note IDs.

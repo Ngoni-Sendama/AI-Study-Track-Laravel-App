@@ -4,8 +4,10 @@ namespace App\Filament\Pages;
 
 use App\Models\Exam;
 use Filament\Pages\Page;
+use App\Models\ExamAnswer;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\RedirectResponse;
 use Filament\Notifications\Notification;
 
 class ExamWriting extends Page
@@ -38,9 +40,8 @@ class ExamWriting extends Page
         ];
     }
 
-    public function submitExam(Request $request): void
+    public function submitExam(Request $request, Exam $exam): RedirectResponse
     {
-        $exam = $this->exam;
         $userId = Auth::id();
 
         $correctAnswers = 0;
@@ -91,6 +92,6 @@ class ExamWriting extends Page
             ->send();
 
         // Redirect the user back to the exam list
-        redirect()->route('filament.dash.resources.exams.index');
+        return redirect()->route('filament.dash.resources.exams.index');
     }
 }

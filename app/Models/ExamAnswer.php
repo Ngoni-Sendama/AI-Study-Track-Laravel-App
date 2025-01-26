@@ -2,10 +2,14 @@
 
 namespace App\Models;
 
+use Spatie\Activitylog\LogOptions;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class ExamAnswer extends Model
 {
+    use LogsActivity;
+    
     protected $fillable = [
         'user_id',
         'exam_id',
@@ -14,6 +18,18 @@ class ExamAnswer extends Model
         'is_correct'
     ];
 
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+        ->logOnly([
+            'user_id',
+            'exam_id',
+            'question_id',
+            'option_id',
+            'is_correct'
+        ]);
+    }
+    
     // Define the relationship with User
     public function user()
     {

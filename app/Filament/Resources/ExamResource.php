@@ -20,6 +20,8 @@ use Filament\Actions\Action;
 use Filament\Resources\Resource;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
+use Filament\Forms\Components\Hidden;
 use Filament\Support\Enums\Alignment;
 use GeminiAPI\Resources\Parts\TextPart;
 use Filament\Notifications\Notification;
@@ -27,8 +29,6 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ExamResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ExamResource\RelationManagers;
-use IbrahimBougaoua\FilaProgress\Tables\Columns\CircleProgress;
-use IbrahimBougaoua\FilaProgress\Infolists\Components\CircleProgressEntry;
 
 class ExamResource extends Resource
 {
@@ -41,6 +41,8 @@ class ExamResource extends Resource
         return $form
             ->columns(1)
             ->schema([
+                Hidden::make('user_id')
+                    ->default(Auth::id()),
                 Forms\Components\Select::make('subject_id')
                     ->required()
                     ->label('Subject')
@@ -71,7 +73,7 @@ class ExamResource extends Resource
     public static function generateExamQuestions(Exam $exam): array
     {
         // Prepare the question prompt
-        $questionPrompt = "Generate 50 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'.  Use example below:
+        $questionPrompt = "Generate 20 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'.  Use example below:
             **Question 5:**
                 Iterative development involves:
                 (A) Releasing a complete software product before testing

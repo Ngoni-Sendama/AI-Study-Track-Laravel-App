@@ -3,13 +3,18 @@
 namespace App\Models;
 
 use GeminiAPI\Client;
+use Spatie\Activitylog\LogOptions;
+use Illuminate\Support\Facades\Log;
 use GeminiAPI\Resources\Parts\TextPart;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Log;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Exam extends Model
 {
+    use LogsActivity;
+
     protected $fillable = [
+        'user_id',
         'subject_id',
         'topics',
         'notes',
@@ -29,6 +34,18 @@ class Exam extends Model
             'notes' => 'array',
             'marks' => 'float',
         ];
+    }
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logOnly([
+                'subject_id',
+                'topics',
+                'notes',
+                'date',
+                'marks',
+            ]);
     }
 
     public function subject()

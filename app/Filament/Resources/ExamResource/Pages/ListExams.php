@@ -24,6 +24,7 @@ class ListExams extends ListRecords
     public function getTabs(): array
     {
         $subjects = Subject::all();
+        $tabs=[];
         foreach ($subjects as $subject) {
             $tabs[$subject->id] = Tab::make($subject->name) 
                 ->badge(fn() => Exam::where('subject_id', $subject->id)->count()) 

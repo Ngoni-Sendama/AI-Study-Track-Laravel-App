@@ -13,11 +13,12 @@
         "filament/filament": "^3.2",
         "gemini-api-php/client": "^1.7",
         "hugomyb/filament-media-action": "^3.1",
-        "ibrahim-bougaoua/filaprogress": "^0.1.0",
+        "joaopaulolndev/filament-edit-profile": "^1.0",
         "joaopaulolndev/filament-pdf-viewer": "^1.0",
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
         "leandrocfe/filament-apex-charts": "^3.1",
+        "rmsramos/activitylog": "^1.0",
         "smalot/pdfparser": "^2.11",
         "troccoli/blade-health-icons": "^4.0"
     },
