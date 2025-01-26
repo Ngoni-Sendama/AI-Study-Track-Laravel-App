@@ -23,7 +23,7 @@ use App\Filament\Resources\SubjectResource\RelationManagers\TopicsRelationManage
 class SubjectResource extends Resource
 {
     protected static ?string $model = Subject::class;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'healthicons-o-register-book';
     public static function form(Form $form): Form
     {
         return $form

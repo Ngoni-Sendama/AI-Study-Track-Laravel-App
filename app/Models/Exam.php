@@ -27,6 +27,7 @@ class Exam extends Model
         return [
             'topics' => 'array',
             'notes' => 'array',
+            'marks' => 'float',
         ];
     }
 
