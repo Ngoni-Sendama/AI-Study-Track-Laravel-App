@@ -32,15 +32,34 @@ class DashPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('dash')
-            ->path('dash')
+            ->path('')
             ->login()
             ->colors([
                 'primary' => Color::Amber,
             ])
             ->topNavigation()
             ->plugins([
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()            
+                ->gridColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                    'lg' => 3
+                ])
+                ->sectionColumnSpan(1)
+                ->checkboxListColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                    'lg' => 4,
+                ])
+                ->resourceCheckboxListColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                ]),
                 FilamentApexChartsPlugin::make(),
-                ActivitylogPlugin::make(),
+                ActivitylogPlugin::make()
+                ->authorize(
+                    fn () => auth()->user()->id === 1
+                ),
                 AuthUIEnhancerPlugin::make()
                     ->mobileFormPanelPosition('bottom')
                     ->formPanelPosition('left')
@@ -63,7 +82,7 @@ class DashPanelProvider extends PanelProvider
                     ->setIcon('healthicons-o-ui-user-profile')
                     ->setSort(10)
                     ->shouldShowDeleteAccountForm(false)
-                    ->shouldShowBrowserSessionsForm()
+                    ->shouldShowBrowserSessionsForm(),
 
             ])
             ->userMenuItems([

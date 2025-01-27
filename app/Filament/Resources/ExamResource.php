@@ -37,6 +37,11 @@ class ExamResource extends Resource
 
     protected static ?string $navigationIcon = 'healthicons-o-i-exam-multiple-choice';
 
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->where('user_id', Auth::id());
+    }
+
     public static function form(Form $form): Form
     {
         return $form

@@ -11,6 +11,7 @@ use Filament\Resources\Pages\ListRecords;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Pages\Concerns\ExposesTableToWidgets;
 use App\Filament\Resources\ExamResource\Widgets\MarksStats;
+use Illuminate\Support\Facades\Auth;
 
 class ListExams extends ListRecords
 {
@@ -28,18 +29,18 @@ class ListExams extends ListRecords
     public function getHeaderWidgets(): array
     {
         return [
-            MarksStats::class,  // Ensure the widget is exposed in the header or main content area
+            MarksStats::class, 
         ];
     }
 
     public function getTabs(): array
     {
-        $subjects = Subject::all();
+        $subjects = Subject::where('user_id',Auth::id());
         $tabs=[];
         foreach ($subjects as $subject) {
             $tabs[$subject->id] = Tab::make($subject->name) 
-                ->badge(fn() => Exam::where('subject_id', $subject->id)->count()) 
-                ->modifyQueryUsing(fn(Builder $query) => $query->where('subject_id', $subject->id)); 
+                ->badge(fn() => Exam::where('subject_id', $subject->id)->where('user_id', Auth::id())->count()) 
+                ->modifyQueryUsing(fn(Builder $query) => $query->where('subject_id', $subject->id)->where('user_id',Auth::id())); 
         }
 
         return $tabs;

@@ -20,7 +20,7 @@ class MarksStats extends BaseWidget
 
     protected function getStats(): array
     {
-        // Ensure values are rounded or cast to integers
+        
         return [
             Stat::make('Total Exams', $this->getPageTableQuery()->count()), // Count of exams
             Stat::make('Average Marks %', intval($this->getPageTableQuery()->avg('marks'))), // Average marks as an integer
