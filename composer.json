@@ -21,6 +21,7 @@
         "leandrocfe/filament-apex-charts": "^3.1",
         "rmsramos/activitylog": "^1.0",
         "smalot/pdfparser": "^2.11",
+        "stechstudio/filament-impersonate": "^3.15",
         "troccoli/blade-health-icons": "^4.0"
     },
     "require-dev": {

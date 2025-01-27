@@ -32,14 +32,14 @@ class DashPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('dash')
-            ->path('dash')
+            ->path('')
             ->login()
             ->colors([
                 'primary' => Color::Amber,
             ])
             ->topNavigation()
             ->plugins([
-                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()            
                 ->gridColumns([
                     'default' => 1,
                     'sm' => 2,
@@ -56,7 +56,10 @@ class DashPanelProvider extends PanelProvider
                     'sm' => 2,
                 ]),
                 FilamentApexChartsPlugin::make(),
-                ActivitylogPlugin::make(),
+                ActivitylogPlugin::make()
+                ->authorize(
+                    fn () => auth()->user()->id === 1
+                ),
                 AuthUIEnhancerPlugin::make()
                     ->mobileFormPanelPosition('bottom')
                     ->formPanelPosition('left')
