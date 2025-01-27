@@ -23,8 +23,11 @@ class MarksStats extends BaseWidget
         
         return [
             Stat::make('Total Exams', $this->getPageTableQuery()->count()), // Count of exams
-            Stat::make('Average Marks %', intval($this->getPageTableQuery()->avg('marks'))), // Average marks as an integer
-            Stat::make('Top Scorer %', intval($this->getPageTableQuery()->max('marks'))), // Max marks scored as an integer
+            Stat::make('Average Marks %', intval($this->getPageTableQuery()->avg('marks')))
+            ->description('The average mark you have obtained in all exams'), // Average marks as an integer
+            Stat::make('Top Scorer %', intval($this->getPageTableQuery()->max('marks')))
+            ->description('The top mark you have obtained in all exams'), // Average marks as an integer
+            // Max marks scored as an integer
         ];
     }
     

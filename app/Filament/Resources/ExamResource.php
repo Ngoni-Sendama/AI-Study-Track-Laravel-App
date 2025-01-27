@@ -53,10 +53,21 @@ class ExamResource extends Resource
                     ->required()
                     ->label('Subject')
                     ->live()
-                    ->options(Subject::all()->pluck('name', 'id')),
-                Forms\Components\Select::make('topics')
-                    ->multiple()
-                    ->options(
+                    ->options(Subject::where('user_id', Auth::id())->pluck('name', 'id')),
+                // Forms\Components\Select::make('topics')
+                //     ->multiple()
+                //     ->options(
+                //         fn(Get $get): Collection => Topic::query()
+                //             ->where('subject_id', $get('subject_id'))
+                //             ->get()
+                //             ->mapWithKeys(fn($topic) => [
+                //                 $topic->topics => "{$topic->unit} - {$topic->topics}"
+                //             ])
+                //     )
+                //     ->preload(),
+                Forms\Components\TagsInput::make('topics')
+                    // ->multiple()
+                    ->suggestions(
                         fn(Get $get): Collection => Topic::query()
                             ->where('subject_id', $get('subject_id'))
                             ->get()
@@ -64,7 +75,8 @@ class ExamResource extends Resource
                                 $topic->topics => "{$topic->unit} - {$topic->topics}"
                             ])
                     )
-                    ->preload(),
+                // ->preload()
+                ,
                 Forms\Components\Select::make('notes')
                     ->multiple()
                     ->options(
@@ -79,14 +91,15 @@ class ExamResource extends Resource
     public static function generateExamQuestions(Exam $exam): array
     {
         // Prepare the question prompt
-        $questionPrompt = "Generate 20 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'.  Use example below:
+        $questionPrompt = "Generate 5 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'. Please be accurate.  Use example below:
             **Question 5:**
                 Iterative development involves:
                 (A) Releasing a complete software product before testing
                 (B) Incremental development and feedback loops
                 (C) Developing a detailed plan before any coding
                 (D) Using a single coding language
-                **Answer: B**  
+                **Answer: B (Explain why answer is this option) Please validate the answers**  
+
             Use the following topics: " . implode(', ', $exam->topics) .
             (!empty($exam->notes) ? ' and refer to the notes: ' . implode(', ', $exam->notes) : '');
 
@@ -172,6 +185,13 @@ class ExamResource extends Resource
                     ->since()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('marks')
+                    ->numeric(decimalPlaces: 0)
+                    ->suffix('%')
+                    ->getStateUsing(function (Exam $record) {
+                        // Return null if marks are not written
+                        return $record->marks;
+                    })
+                    ->color(fn(?string $state): ?string => $state !== null && (float)$state >= 50 ? 'success' : 'danger')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -182,6 +202,7 @@ class ExamResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
@@ -191,7 +212,7 @@ class ExamResource extends Resource
                     ->hidden(fn(Exam $record) => $record->questionSets()->exists()),
                 Tables\Actions\Action::make('generate')
                     ->hidden(fn(Exam $record) => $record->questionSets()->exists())
-                    ->label('generate exam')
+                    ->label('Generate exam')
                     ->color('info')
                     ->button()
                     ->modalIcon('heroicon-o-check-badge')
