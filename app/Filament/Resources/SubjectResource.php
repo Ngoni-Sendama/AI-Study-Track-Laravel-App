@@ -28,7 +28,14 @@ use App\Filament\Resources\SubjectResource\RelationManagers\TopicsRelationManage
 class SubjectResource extends Resource
 {
     protected static ?string $model = Subject::class;
+
     protected static ?string $navigationIcon = 'healthicons-o-register-book';
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->where('user_id', Auth::id());
+    }
+
     public static function form(Form $form): Form
     {
         return $form
