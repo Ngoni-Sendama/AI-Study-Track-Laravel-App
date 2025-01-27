@@ -28,7 +28,7 @@ class ListExams extends ListRecords
     public function getHeaderWidgets(): array
     {
         return [
-            MarksStats::class,  // Ensure the widget is exposed in the header or main content area
+            MarksStats::class, 
         ];
     }
 

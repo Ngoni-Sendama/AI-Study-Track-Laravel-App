@@ -7,6 +7,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
+        "bezhansalleh/filament-shield": "^3.3",
         "davidhsianturi/blade-bootstrap-icons": "^1.5",
         "devonab/filament-easy-footer": "^1.0",
         "diogogpinto/filament-auth-ui-enhancer": "^1.0",

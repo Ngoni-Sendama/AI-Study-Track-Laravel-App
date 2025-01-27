@@ -39,6 +39,22 @@ class DashPanelProvider extends PanelProvider
             ])
             ->topNavigation()
             ->plugins([
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+                ->gridColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                    'lg' => 3
+                ])
+                ->sectionColumnSpan(1)
+                ->checkboxListColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                    'lg' => 4,
+                ])
+                ->resourceCheckboxListColumns([
+                    'default' => 1,
+                    'sm' => 2,
+                ]),
                 FilamentApexChartsPlugin::make(),
                 ActivitylogPlugin::make(),
                 AuthUIEnhancerPlugin::make()
@@ -63,7 +79,7 @@ class DashPanelProvider extends PanelProvider
                     ->setIcon('healthicons-o-ui-user-profile')
                     ->setSort(10)
                     ->shouldShowDeleteAccountForm(false)
-                    ->shouldShowBrowserSessionsForm()
+                    ->shouldShowBrowserSessionsForm(),
 
             ])
             ->userMenuItems([

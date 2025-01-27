@@ -20,3 +20,7 @@
 - [ ] Use AI to show weak areas (units/topics with poor performance). And Study Recommendations
 - [ ] Exams Perfomance, Subject Perfomance, Best Marks Perfomance, Next Date Exam, Topics with weaknesses
 - [ ] Send Alerts
+
+# Admin Reg
+- [ ] regenerate Policies `php artisan shield:generate --all`
+- [ ] reAssign Super Admin `php artisan shield:super-admin`
