@@ -6,11 +6,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\OpenController;
 
-// Route::get('/', function () {
+// Route::get('subjects', function () {
 //     return view('welcome');
 // })->name('home');
 
 Route::get('/openai', [OpenController::class, 'showForm'])->name('openai.form');
+Route::get('/villa', [OpenController::class, 'subjects'])->name('subjects');
 
 Route::post('convert-pdf', [PDFController::class, 'convertPdfToText']);
 
