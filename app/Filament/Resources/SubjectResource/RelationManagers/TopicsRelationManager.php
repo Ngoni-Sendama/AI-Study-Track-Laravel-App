@@ -21,10 +21,11 @@ class TopicsRelationManager extends RelationManager
                     ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('topics')
+                    ->rows(5)
                     ->columnSpanFull(),
             ]);
     }
-    public function table(Table $table): Table
+    public function table(Table $table): Table 
     {
         return $table
             ->recordTitleAttribute('unit')
