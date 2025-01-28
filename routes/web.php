@@ -2,6 +2,7 @@
 
 use App\Filament\Pages\ExamAnswer;
 use App\Filament\Pages\ExamWriting;
+use App\Http\Controllers\MistralController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PDFController;
 use App\Http\Controllers\OpenController;
@@ -20,3 +21,5 @@ Route::get('/exam-writing/{exam}', ExamWriting::class)->name('exam-writing');
 Route::get('/exam-answers/{examId}', ExamAnswer::class)->name('exam-answers');
 
 Route::post('/exam-writing/{exam}/submit', [ExamWriting::class, 'submitExam'])->name('filament.pages.exam-writing.submit');
+
+Route::get('/ask-mistral', [MistralController::class, 'askMistral']);
