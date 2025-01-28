@@ -21,6 +21,7 @@ use Filament\Resources\Resource;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 use Filament\Forms\Components\Hidden;
 use Filament\Support\Enums\Alignment;
 use GeminiAPI\Resources\Parts\TextPart;
@@ -53,10 +54,21 @@ class ExamResource extends Resource
                     ->required()
                     ->label('Subject')
                     ->live()
-                    ->options(Subject::all()->pluck('name', 'id')),
-                Forms\Components\Select::make('topics')
-                    ->multiple()
-                    ->options(
+                    ->options(Subject::where('user_id', Auth::id())->pluck('name', 'id')),
+                // Forms\Components\Select::make('topics')
+                //     ->multiple()
+                //     ->options(
+                //         fn(Get $get): Collection => Topic::query()
+                //             ->where('subject_id', $get('subject_id'))
+                //             ->get()
+                //             ->mapWithKeys(fn($topic) => [
+                //                 $topic->topics => "{$topic->unit} - {$topic->topics}"
+                //             ])
+                //     )
+                //     ->preload(),
+                Forms\Components\TagsInput::make('topics')
+                    // ->multiple()
+                    ->suggestions(
                         fn(Get $get): Collection => Topic::query()
                             ->where('subject_id', $get('subject_id'))
                             ->get()
@@ -64,7 +76,8 @@ class ExamResource extends Resource
                                 $topic->topics => "{$topic->unit} - {$topic->topics}"
                             ])
                     )
-                    ->preload(),
+                // ->preload()
+                ,
                 Forms\Components\Select::make('notes')
                     ->multiple()
                     ->options(
@@ -79,30 +92,41 @@ class ExamResource extends Resource
     public static function generateExamQuestions(Exam $exam): array
     {
         // Prepare the question prompt
-        $questionPrompt = "Generate 20 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'.  Use example below:
+        $questionPrompt = "Generate 20 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'. Please be accurate. Use example below:
             **Question 5:**
                 Iterative development involves:
                 (A) Releasing a complete software product before testing
                 (B) Incremental development and feedback loops
                 (C) Developing a detailed plan before any coding
                 (D) Using a single coding language
-                **Answer: B**  
+            **Answer: B (Explain why answer is this option) Please validate the answers**  
+    
             Use the following topics: " . implode(', ', $exam->topics) .
             (!empty($exam->notes) ? ' and refer to the notes: ' . implode(', ', $exam->notes) : '');
 
         try {
-            // Initialize the Gemini API client
-            $client = new Client(env('GEMINI_API_KEY'));
+            // Make a request to the Mistral API
+            $response = Http::withHeaders([
+                'Content-Type' => 'application/json',
+                'Accept' => 'application/json',
+                'Authorization' => 'Bearer ' . env('MISTRAL_API_KEY'),
+            ])
+                ->post('https://api.mistral.ai/v1/chat/completions', [
+                    'model' => 'mistral-large-latest',
+                    'messages' => [
+                        ['role' => 'user', 'content' => $questionPrompt],
+                    ],
+                ]);
 
-            // Request questions from the Gemini API
-            $response = $client->geminiPro()->generateContent(
-                new TextPart($questionPrompt)
-            );
+            if (!$response->successful()) {
+                Log::error('Failed to generate questions for Exam ID: ' . $exam->id);
+                return ['success' => false, 'message' => 'Failed to generate questions.'];
+            }
 
-            $responseText = $response->text();
+            $responseText = $response->json('choices.0.message.content');
 
             if (empty($responseText)) {
-                Log::error('Failed to generate questions for Exam ID: ' . $exam->id);
+                Log::error('Empty response from Mistral API for Exam ID: ' . $exam->id);
                 return ['success' => false, 'message' => 'Failed to generate questions.'];
             }
 
@@ -152,6 +176,7 @@ class ExamResource extends Resource
             return ['success' => false, 'message' => 'An unexpected error occurred.'];
         }
     }
+
     public static function getWidgets(): array
     {
         return [
@@ -172,6 +197,13 @@ class ExamResource extends Resource
                     ->since()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('marks')
+                    ->numeric(decimalPlaces: 0)
+                    ->suffix('%')
+                    ->getStateUsing(function (Exam $record) {
+                        // Return null if marks are not written
+                        return $record->marks;
+                    })
+                    ->color(fn(?string $state): ?string => $state !== null && (float)$state >= 50 ? 'success' : 'danger')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -182,18 +214,20 @@ class ExamResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
+                Tables\Actions\ViewAction::make()
+                ->hidden(fn(Exam $record) => $record->questionSets()->exists()),
                 Tables\Actions\EditAction::make()
                     ->hidden(fn(Exam $record) => $record->questionSets()->exists()),
                 Tables\Actions\Action::make('generate')
                     ->hidden(fn(Exam $record) => $record->questionSets()->exists())
-                    ->label('generate exam')
+                    ->label('Generate exam')
                     ->color('info')
-                    ->button()
+                    ->link()
                     ->modalIcon('heroicon-o-check-badge')
                     ->modalIconColor('success')
                     ->requiresConfirmation()
@@ -240,7 +274,7 @@ class ExamResource extends Resource
                     ->color('success')
                     ->visible(fn(Exam $record) => $record->answers()->exists())
                     ->url(fn(Exam $record): string => route('exam-answers', ['examId' => $record->id]))
-                    ->button(),
+                    ->link(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

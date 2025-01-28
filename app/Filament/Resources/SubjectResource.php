@@ -71,7 +71,8 @@ class SubjectResource extends Resource
                         Forms\Components\TextInput::make('unit')
                             ->required()
                             ->maxLength(255),
-                        Forms\Components\Textarea::make('topics'),
+                        Forms\Components\Textarea::make('topics')
+                        ->rows(5),
                     ]),
             ]);
     }

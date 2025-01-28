@@ -1,5 +1,7 @@
 <?php
+
 namespace App\Filament\Resources\SubjectResource\RelationManagers;
+
 use Filament\Forms;
 use Filament\Tables;
 use Filament\Forms\Form;
@@ -10,7 +12,6 @@ use Filament\Tables\Columns\Layout\Split;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Resources\RelationManagers\RelationManager;
-use Hugomyb\FilamentMediaAction\Tables\Actions\MediaAction;
 class NotesRelationManager extends RelationManager
 {
     protected static string $relationship = 'notes';
@@ -18,13 +19,11 @@ class NotesRelationManager extends RelationManager
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('note_content')
+                Forms\Components\Textarea::make('note_content')
                     ->required()
+                    ->rows(10)
                     ->label('Notes')
-                    ->acceptedFileTypes(['application/pdf'])
-                    ->columnSpanFull()
-                    ->preserveFilenames()
-                    ->directory('notes'),
+                    ->columnSpanFull(),
             ]);
     }
     public function table(Table $table): Table
@@ -33,12 +32,14 @@ class NotesRelationManager extends RelationManager
             ->recordTitleAttribute('note_content')
             ->columns([
                 Split::make([
-                    Tables\Columns\TextColumn::make('note_content'),
+                    Tables\Columns\TextColumn::make('note_content')
+                    ->limit(300)
+                    ->wrap(),
                 ])
             ])
             ->contentGrid([
                 'md' => 2,
-                'xl' => 4,
+                'xl' => 3,
             ])
             ->filters([
                 Tables\Filters\TrashedFilter::make()
@@ -47,17 +48,12 @@ class NotesRelationManager extends RelationManager
                 Tables\Actions\CreateAction::make(),
             ])
             ->actions([
-                // Tables\Actions\ViewAction::make(),
-                // Tables\Actions\EditAction::make(),
+                Tables\Actions\ViewAction::make(),
+                Tables\Actions\EditAction::make(),
                 Tables\Actions\DeleteAction::make(),
                 Tables\Actions\ForceDeleteAction::make(),
                 Tables\Actions\RestoreAction::make(),
-                MediaAction::make('note_content')
-                    ->modalHeading(fn($record) => $record->name)
-                    ->modalFooterActionsAlignment(Alignment::Center)
-                    ->icon('bi-file-earmark-pdf-fill')
-                    ->iconButton()
-                    ->media(fn($record) => asset('storage/' . $record->note_content))
+         
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

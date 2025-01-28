@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Subject;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 
 class OpenController extends Controller
 {
+    public function subjects()
+    {
+        $subjects=Subject::where('user_id',2)->get();
+        return view('welcome',compact('subjects'));
+    }
      // Function to handle OpenAI API request and generate text
      public function generateText(Request $request)
      {

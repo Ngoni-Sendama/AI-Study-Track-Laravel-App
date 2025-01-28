@@ -35,14 +35,21 @@ class ListExams extends ListRecords
 
     public function getTabs(): array
     {
-        $subjects = Subject::where('user_id',Auth::id());
-        $tabs=[];
+        // Get all subjects for the current user
+        $subjects = Subject::where('user_id', Auth::id())->get();
+        $tabs = [];
+    
+        // Generate a tab for each subject
         foreach ($subjects as $subject) {
             $tabs[$subject->id] = Tab::make($subject->name) 
-                ->badge(fn() => Exam::where('subject_id', $subject->id)->where('user_id', Auth::id())->count()) 
-                ->modifyQueryUsing(fn(Builder $query) => $query->where('subject_id', $subject->id)->where('user_id',Auth::id())); 
+                ->badge(fn() => Exam::where('subject_id', $subject->id)
+                    ->where('user_id', Auth::id())
+                    ->count()) 
+                ->modifyQueryUsing(fn(Builder $query) => $query->where('subject_id', $subject->id)
+                    ->where('user_id', Auth::id())); 
         }
-
+    
         return $tabs;
     }
+    
 }
