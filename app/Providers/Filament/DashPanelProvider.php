@@ -36,6 +36,7 @@ class DashPanelProvider extends PanelProvider
             ->login()
             ->colors([
                 'primary' => Color::Amber,
+                'button1' => Color::Lime,
             ])
             ->topNavigation()
             ->plugins([
