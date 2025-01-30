@@ -55,17 +55,7 @@ class ExamResource extends Resource
                     ->label('Subject')
                     ->live()
                     ->options(Subject::where('user_id', Auth::id())->pluck('name', 'id')),
-                // Forms\Components\Select::make('topics')
-                //     ->multiple()
-                //     ->options(
-                //         fn(Get $get): Collection => Topic::query()
-                //             ->where('subject_id', $get('subject_id'))
-                //             ->get()
-                //             ->mapWithKeys(fn($topic) => [
-                //                 $topic->topics => "{$topic->unit} - {$topic->topics}"
-                //             ])
-                //     )
-                //     ->preload(),
+          
                 Forms\Components\TagsInput::make('topics')
                     // ->multiple()
                     ->suggestions(

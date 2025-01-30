@@ -35,9 +35,12 @@ class DashPanelProvider extends PanelProvider
             ->path('')
             ->login()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::hex('#f48320'),
                 'button1' => Color::Lime,
             ])
+            ->brandName('LPU Personal Study App')
+            ->brandLogo('https://www.lpu.in/lpu-assets/images/logo/logo.svg')
+            ->brandLogoHeight('50px')
             ->topNavigation()
             ->plugins([
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()            
@@ -58,16 +61,18 @@ class DashPanelProvider extends PanelProvider
                 ]),
                 FilamentApexChartsPlugin::make(),
                 ActivitylogPlugin::make()
+                ->navigationGroup('Filament Shield')
                 ->authorize(
                     fn () => auth()->user()->id === 1
                 ),
                 AuthUIEnhancerPlugin::make()
                     ->mobileFormPanelPosition('bottom')
                     ->formPanelPosition('left')
-                    ->formPanelWidth('80%')
+                    ->formPanelWidth('60%')
                     ->formPanelBackgroundColor(Color::Zinc, '300')
-                    ->emptyPanelBackgroundImageOpacity('80%')
-                    ->emptyPanelBackgroundImageUrl(asset('images/study.jpg')),
+                    ->emptyPanelBackgroundImageOpacity('100%')
+                    ->emptyPanelBackgroundImageUrl('http://bookuradmission.com/college_banner/Lovely%20Professional%20University%20(LPU)_banner211112102119.jpg'),
+                    // ->emptyPanelBackgroundImageUrl(asset('images/study.jpg')),
                 EasyFooterPlugin::make()
                     ->footerEnabled()
                     ->withLoadTime()
