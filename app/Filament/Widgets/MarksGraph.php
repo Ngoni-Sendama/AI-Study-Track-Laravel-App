@@ -2,23 +2,25 @@
 
 namespace App\Filament\Widgets;
 
+use App\Models\Subject;
+use Illuminate\Support\Facades\Auth;
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 
-class ExamsPerfomance extends ApexChartWidget
+class MarksGraph extends ApexChartWidget
 {
     /**
      * Chart Id
      *
      * @var string
      */
-    protected static ?string $chartId = 'examsPerfomance';
+    protected static ?string $chartId = 'marksGraph';
 
     /**
      * Widget Title
      *
      * @var string|null
      */
-    protected static ?string $heading = 'ExamsPerfomance';
+    protected static ?string $heading = 'Average Marks Graph';
 
     /**
      * Chart options (series, labels, types, size, animations...)
@@ -28,19 +30,21 @@ class ExamsPerfomance extends ApexChartWidget
      */
     protected function getOptions(): array
     {
+        $subjects = Subject::where('user_id', Auth::id())->pluck('name');
         return [
             'chart' => [
-                'type' => 'area',
-                'height' => 350,
+                'type' => 'bar',
+                'height' => 300,
             ],
             'series' => [
                 [
-                    'name' => 'ExamsPerfomance',
-                    'data' => [70, 66, 60, 80, 50],
+                    'name' => 'MarksGraph',
+                    'data' => [60, 40, 40, 76, 30],
                 ],
             ],
             'xaxis' => [
-                'categories' => ['Exam1', 'Exam2', 'Exam3', 'Exam4', 'Exam5'],
+                'categories' =>  ['CAP 486', 'CAP 314' ,'MKT 201', 'CAP 663', 'PEA 204'],
+                // 'categories' =>  $subjects->toArray(),
                 'labels' => [
                     'style' => [
                         'fontFamily' => 'inherit',
@@ -55,12 +59,6 @@ class ExamsPerfomance extends ApexChartWidget
                 ],
             ],
             'colors' => ['#f59e0b'],
-            'stroke' => [
-                'curve' => 'smooth',
-            ],
-            'dataLabels' => [
-                'enabled' => false,
-            ],
         ];
     }
 }

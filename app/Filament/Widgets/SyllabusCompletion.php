@@ -18,7 +18,7 @@ class SyllabusCompletion extends ApexChartWidget
      *
      * @var string|null
      */
-    protected static ?string $heading = 'SyllabusCompletion';
+    protected static ?string $heading = 'Syllabus Completion';
 
     /**
      * Chart options (series, labels, types, size, animations...)
@@ -58,8 +58,8 @@ class SyllabusCompletion extends ApexChartWidget
             'stroke' => [
                 'lineCap' => 'round',
             ],
-            'labels' => ['SyllabusCompletion'],
-            'colors' => ['#f59e0b'],
+            'labels' => ['Syllabus Completion'],
+            'colors' => ['#25cc04'],
         ];
     }
 }

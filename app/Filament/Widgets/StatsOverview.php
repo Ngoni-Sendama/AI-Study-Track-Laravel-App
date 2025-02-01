@@ -20,8 +20,8 @@ class StatsOverview extends BaseWidget
             Stat::make('Last Exam Mark', '80%')
                 ->description('Next Exam: 22 Jan')
                 ->color('danger'),
-            Stat::make('Bounce rate', '21%'),
-            Stat::make('Average time on page', '3:12'),
+            Stat::make('Average Exam Mark', '90%'),
+            Stat::make('Pending Exams', '3/12'),
         ];
     }
 }
