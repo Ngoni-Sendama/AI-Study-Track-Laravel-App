@@ -10,9 +10,16 @@
 - Activity Logs 
 
 # Images
-![dashbord](./images/Dashboard.png "Dashboard")
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+| ![login](./images/Login%20Page.png "Login") | ![dashbord](./images/Dashboard.png "Dashboard") | ![subjects](./images/Subjects.png "Subjects") |
+| ![subjects view](./images/Subject%20View.png "Subjects View") | ![subjects view](./images/Subject%20View%20Topics.png "Subjects View") | ![Exams view](./images/Exam%20List%20with%20Buttons.png "Exams View") |
 
-# Requirements
+
+more images check them [here](./images/)
+
+
+# Requirements to run this project
 - Mistral API [click here](https://console.mistral.ai/api-keys/)
 - Gemini API [click here](https://aistudio.google.com/app/apikey)
 
@@ -34,6 +41,6 @@
 - [ ] Exams Perfomance, Subject Perfomance, Best Marks Perfomance, Next Date Exam, Topics with weaknesses
 - [ ] Send Alerts
 
-# Admin Reg
+## Admin Reg
 - [ ] regenerate Policies `php artisan shield:generate --all`
 - [ ] reAssign Super Admin `php artisan shield:super-admin`
