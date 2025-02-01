@@ -1,7 +1,22 @@
 # Features
 
-- Send alerts of Exams
-## Platform Features
+- Upload syllabus, lecture notes (PDFs, PPTs, books, or teacher-provided materials)
+- Automatically extract topics from the uploaded syllabus and store them in the database using [PHP/Parser](https://github.com/smalot/pdfparser)
+- Add personal class notes and AI will generate smart summaries
+- AI-powered exam generation – More than 20 MCQs with options A-D, based on the uploaded content
+-  Practice for CA’s, Midterms, and Final Exams in an engaging way
+- Average Marks Analytics
+- Roles and Permissions using [Spatie](https://filamentphp.com/plugins/bezhansalleh-shield)
+- Activity Logs 
+
+# Images
+![dashbord](./images/Dashboard.png "Dashboard")
+
+# Requirements
+- Mistral API [click here](https://console.mistral.ai/api-keys/)
+- Gemini API [click here](https://aistudio.google.com/app/apikey)
+
+## Platform Features Plan
 
 - [x] User Auth
 - [x] Manage Subjects
