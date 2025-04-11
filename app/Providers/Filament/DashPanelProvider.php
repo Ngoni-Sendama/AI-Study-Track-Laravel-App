@@ -8,6 +8,7 @@ use Filament\Widgets;
 use Filament\PanelProvider;
 use Filament\Navigation\MenuItem;
 use Filament\Support\Colors\Color;
+use PHPUnit\Event\Telemetry\System;
 use Filament\Http\Middleware\Authenticate;
 use Rmsramos\Activitylog\ActivitylogPlugin;
 use Illuminate\Session\Middleware\StartSession;
@@ -15,6 +16,7 @@ use Devonab\FilamentEasyFooter\EasyFooterPlugin;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Filament\Http\Middleware\AuthenticateSession;
 use DiogoGPinto\AuthUIEnhancer\AuthUIEnhancerPlugin;
+use GeoSot\FilamentEnvEditor\FilamentEnvEditorPlugin;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Http\Middleware\DisableBladeIconComponents;
@@ -43,28 +45,34 @@ class DashPanelProvider extends PanelProvider
             ->brandLogoHeight('50px')
             ->topNavigation()
             ->plugins([
-                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()            
-                ->gridColumns([
-                    'default' => 1,
-                    'sm' => 2,
-                    'lg' => 3
-                ])
-                ->sectionColumnSpan(1)
-                ->checkboxListColumns([
-                    'default' => 1,
-                    'sm' => 2,
-                    'lg' => 4,
-                ])
-                ->resourceCheckboxListColumns([
-                    'default' => 1,
-                    'sm' => 2,
-                ]),
+                FilamentEnvEditorPlugin::make()
+                    ->navigationGroup('Filament Shield')
+                    ->navigationLabel('My Env')
+                    ->navigationIcon('heroicon-o-cog-8-tooth')
+                    ->navigationSort(1)
+                    ->slug('env-editor'),
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
+                    ->gridColumns([
+                        'default' => 1,
+                        'sm' => 2,
+                        'lg' => 3
+                    ])
+                    ->sectionColumnSpan(1)
+                    ->checkboxListColumns([
+                        'default' => 1,
+                        'sm' => 2,
+                        'lg' => 4,
+                    ])
+                    ->resourceCheckboxListColumns([
+                        'default' => 1,
+                        'sm' => 2,
+                    ]),
                 FilamentApexChartsPlugin::make(),
                 ActivitylogPlugin::make()
-                ->navigationGroup('Filament Shield')
-                ->authorize(
-                    fn () => auth()->user()->id === 1
-                ),
+                    ->navigationGroup('Filament Shield')
+                    ->authorize(
+                        fn() => auth()->user()->id === 1
+                    ),
                 AuthUIEnhancerPlugin::make()
                     ->mobileFormPanelPosition('bottom')
                     ->formPanelPosition('left')
@@ -72,7 +80,7 @@ class DashPanelProvider extends PanelProvider
                     ->formPanelBackgroundColor(Color::Zinc, '300')
                     ->emptyPanelBackgroundImageOpacity('100%')
                     ->emptyPanelBackgroundImageUrl('http://bookuradmission.com/college_banner/Lovely%20Professional%20University%20(LPU)_banner211112102119.jpg'),
-                    // ->emptyPanelBackgroundImageUrl(asset('images/study.jpg')),
+                // ->emptyPanelBackgroundImageUrl(asset('images/study.jpg')),
                 EasyFooterPlugin::make()
                     ->footerEnabled()
                     ->withLoadTime()
