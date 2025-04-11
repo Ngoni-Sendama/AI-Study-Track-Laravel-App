@@ -55,7 +55,7 @@ class ExamResource extends Resource
                     ->label('Subject')
                     ->live()
                     ->options(Subject::where('user_id', Auth::id())->pluck('name', 'id')),
-          
+
                 Forms\Components\TagsInput::make('topics')
                     // ->multiple()
                     ->suggestions(
@@ -78,32 +78,37 @@ class ExamResource extends Resource
                 Forms\Components\DateTimePicker::make('date'),
             ]);
     }
-
+   
     public static function generateExamQuestions(Exam $exam): array
     {
         // Prepare the question prompt
-        $questionPrompt = "Generate 25 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'. Please be accurate.  Use example below:
-            **Question 5:**
-                Iterative development involves:
-                (A) Releasing a complete software product before testing
-                (B) Incremental development and feedback loops
-                (C) Developing a detailed plan before any coding
-                (D) Using a single coding language
-                **Answer: B (Explain why answer is this option) Please validate the answers**  
+        $questionPrompt = "Generate 25 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'. Please be accurate. Use example below:
+        **Question 5:**
+            Iterative development involves:
+            (A) Releasing a complete software product before testing
+            (B) Incremental development and feedback loops
+            (C) Developing a detailed plan before any coding
+            (D) Using a single coding language
+            **Answer: B (Explain why answer is this option) Please validate the answers**  
 
-            Use the following topics: " . implode(', ', $exam->topics) .
+        Use the following topics: " . implode(', ', $exam->topics) .
             (!empty($exam->notes) ? ' and refer to the notes: ' . implode(', ', $exam->notes) : '');
 
         try {
-            // Initialize the Gemini API client
-            $client = new Client(env('GEMINI_API_KEY'));
+            $response = Http::withHeaders([
+                'Content-Type' => 'application/json',
+            ])->post('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' . env('GEMINI_API_KEY'), [
+                'contents' => [
+                    [
+                        'parts' => [
+                            ['text' => $questionPrompt]
+                        ]
+                    ]
+                ]
+            ]);
 
-            // Request questions from the Gemini API
-            $response = $client->geminiPro()->generateContent(
-                new TextPart($questionPrompt)
-            );
-
-            $responseText = $response->text();
+            $responseBody = $response->json();
+            $responseText = $responseBody['candidates'][0]['content']['parts'][0]['text'] ?? '';
 
             if (empty($responseText)) {
                 Log::error('Failed to generate questions for Exam ID: ' . $exam->id);
@@ -113,7 +118,7 @@ class ExamResource extends Resource
             Log::info('Generated questions for Exam ID: ' . $exam->id . "\n" . $responseText);
 
             // Parse the response into questions
-            preg_match_all('/\*\*Question (\d+):\*\*\s*(.*?)\s*\(A\)\s*(.*?)\s*\(B\)\s*(.*?)\s*\(C\)\s*(.*?)\s*\(D\)\s*(.*?)\s*\*\*Answer:\s*([A-D])\*\*/s', $responseText, $matches, PREG_SET_ORDER);
+            preg_match_all('/\*\*Question (\d+):\*\*\s*(.*?)\s*\(A\)\s*(.*?)\s*\(B\)\s*(.*?)\s*\(C\)\s*(.*?)\s*\(D\)\s*(.*?)\s*\*\*Answer:\s*([A-D])\b/s', $responseText, $matches, PREG_SET_ORDER);
 
             if (empty($matches)) {
                 Log::error('Failed to parse questions or answers from response text.');
@@ -156,6 +161,7 @@ class ExamResource extends Resource
             return ['success' => false, 'message' => 'An unexpected error occurred.'];
         }
     }
+
 
     public static function generateExamMistral(Exam $exam): array
     {
@@ -288,7 +294,7 @@ class ExamResource extends Resource
             ])
             ->actions([
                 Tables\Actions\ViewAction::make()
-                ->hidden(fn(Exam $record) => $record->questionSets()->exists()),
+                    ->hidden(fn(Exam $record) => $record->questionSets()->exists()),
                 Tables\Actions\EditAction::make()
                     ->hidden(fn(Exam $record) => $record->questionSets()->exists()),
                 Tables\Actions\Action::make('generate1')
@@ -330,7 +336,7 @@ class ExamResource extends Resource
                         }
                         return $table->deferLoading();
                     }),
-                    Tables\Actions\Action::make('generate')
+                Tables\Actions\Action::make('generate')
                     ->hidden(fn(Exam $record) => $record->questionSets()->exists())
                     ->label('Generate exam using Mistral')
                     ->color('info')
