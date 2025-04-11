@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dffd0d2f445553212163bead1244d9b1",
+    "content-hash": "5a4852f22708143273d0a25a2ce1b5d0",
     "packages": [
         {
             "name": "afatmustafa/blade-hugeicons",
@@ -1918,6 +1918,141 @@
                 "source": "https://github.com/gemini-api-php/client/tree/v1.7.1"
             },
             "time": "2025-01-13T11:26:59+00:00"
+        },
+        {
+            "name": "geo-sot/filament-env-editor",
+            "version": "0.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeoSot/filament-env-editor.git",
+                "reference": "59399f707a6888c62703cf4dc776be36db549675"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeoSot/filament-env-editor/zipball/59399f707a6888c62703cf4dc776be36db549675",
+                "reference": "59399f707a6888c62703cf4dc776be36db549675",
+                "shasum": ""
+            },
+            "require": {
+                "filament/filament": "^3.0",
+                "geo-sot/laravel-env-editor": "^3.0",
+                "illuminate/contracts": "^10.0|^11.0",
+                "php": ">=8.1",
+                "spatie/laravel-package-tools": "^1.15.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3",
+                "larastan/larastan": "^2",
+                "orchestra/testbench": ">=9",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "GeoSot\\FilamentEnvEditor\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GeoSot\\FilamentEnvEditor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Geo Sot",
+                    "email": "geo.sotis@gmail.com"
+                }
+            ],
+            "description": "Access .env file though Filament admin panel",
+            "homepage": "https://github.com/GeoSot/filament-env-editor",
+            "keywords": [
+                "EnvEditor",
+                "filament-env-editor",
+                "geo-sot",
+                "laravel",
+                "laravel-env-editor"
+            ],
+            "support": {
+                "issues": "https://github.com/GeoSot/filament-env-editor/issues",
+                "source": "https://github.com/GeoSot/filament-env-editor"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GeoSot",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-12-24T00:48:59+00:00"
+        },
+        {
+            "name": "geo-sot/laravel-env-editor",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GeoSot/Laravel-EnvEditor.git",
+                "reference": "ba93bdb1bd80d6ce2b5ef434b8c60d3fd440293d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GeoSot/Laravel-EnvEditor/zipball/ba93bdb1bd80d6ce2b5ef434b8c60d3fd440293d",
+                "reference": "ba93bdb1bd80d6ce2b5ef434b8c60d3fd440293d",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=10.0",
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3",
+                "larastan/larastan": "^2",
+                "orchestra/testbench": ">=9",
+                "rector/rector": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "aliases": {
+                        "EnvEditor": "GeoSot\\EnvEditor\\Facades\\EnvEditor"
+                    },
+                    "providers": [
+                        "GeoSot\\EnvEditor\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GeoSot\\EnvEditor\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Geo Sot",
+                    "email": "geo.sotis@gmail.com"
+                }
+            ],
+            "description": "A laravel Package that supports .Env File, editing and backup ",
+            "keywords": [
+                "EnvEditor",
+                "geo-sot",
+                "laravel",
+                "laravel-env-editor"
+            ],
+            "support": {
+                "issues": "https://github.com/GeoSot/Laravel-EnvEditor/issues",
+                "source": "https://github.com/GeoSot/Laravel-EnvEditor/tree/3.1.0"
+            },
+            "time": "2024-04-14T22:39:23+00:00"
         },
         {
             "name": "graham-campbell/result-type",
