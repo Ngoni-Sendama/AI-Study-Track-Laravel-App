@@ -40,8 +40,8 @@ class DashPanelProvider extends PanelProvider
                 'primary' => Color::hex('#f48320'),
                 'button1' => Color::Lime,
             ])
-            ->brandName('LPU Personal Study App')
-            ->brandLogo('https://www.lpu.in/lpu-assets/images/logo/logo.svg')
+            ->brandName('AI Study App')
+            // ->brandLogo('https://www.lpu.in/lpu-assets/images/logo/logo.svg')
             ->brandLogoHeight('50px')
             ->topNavigation()
             ->plugins([
@@ -79,7 +79,7 @@ class DashPanelProvider extends PanelProvider
                     ->formPanelWidth('60%')
                     ->formPanelBackgroundColor(Color::Zinc, '300')
                     ->emptyPanelBackgroundImageOpacity('100%')
-                    ->emptyPanelBackgroundImageUrl('http://bookuradmission.com/college_banner/Lovely%20Professional%20University%20(LPU)_banner211112102119.jpg'),
+                    ->emptyPanelBackgroundImageUrl('https://www.optimal-systems.de/wp-content/uploads/2022/03/ki-roboter-loest-mathe-probleme.webp'),
                 // ->emptyPanelBackgroundImageUrl(asset('images/study.jpg')),
                 EasyFooterPlugin::make()
                     ->footerEnabled()
