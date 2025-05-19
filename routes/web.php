@@ -2,9 +2,7 @@
 
 use App\Filament\Pages\ExamAnswer;
 use App\Filament\Pages\ExamWriting;
-use App\Http\Controllers\MistralController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PDFController;
 
 // Route::get('subjects', function () {
 //     return view('welcome');
