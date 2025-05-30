@@ -96,6 +96,7 @@ class DashPanelProvider extends PanelProvider
                     ->setIcon('healthicons-o-ui-user-profile')
                     ->setSort(10)
                     ->shouldShowDeleteAccountForm(false)
+                    ->shouldRegisterNavigation(false)
                     ->shouldShowBrowserSessionsForm(),
 
             ])
