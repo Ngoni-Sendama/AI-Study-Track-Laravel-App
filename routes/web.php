@@ -18,8 +18,8 @@ Route::post('/chat/clear', function () {
 
 
 // Filament View
-Route::get('/exam-writing/{exam}', ExamWriting::class)->name('exam-writing');
-Route::get('/exam-answers/{examId}', ExamAnswer::class)->name('exam-answers');
+Route::get('/exam-writing/{exam}-/codewithngoni', ExamWriting::class)->name('exam-writing');
+Route::get('/exam-answers/{examId}-/codewithngoni', ExamAnswer::class)->name('exam-answers');
 
 Route::post('/exam-writing/{exam}/submit', [ExamWriting::class, 'submitExam'])->name('filament.pages.exam-writing.submit');
 
