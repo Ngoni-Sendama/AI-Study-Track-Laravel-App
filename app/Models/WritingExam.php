@@ -11,6 +11,12 @@ class WritingExam extends Model
     protected $fillable=[
         'user_id',
         'subject_id',
-        'topics'
+        'topics',
+        'notes', // from User
+        'date', // from User
+        'marks', // from AI
+        'question', // from AI
+        'answer', // from user
+        'analysis', // from AI
     ];
 }

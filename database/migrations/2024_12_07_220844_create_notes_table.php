@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('notes', function (Blueprint $table) {
             $table->id();
+            $table->softDeletes();
             $table->unsignedBigInteger('subject_id');
-            $table->text('note_content');
+            $table->text('note_content')->nullable();
+            $table->text('link')->nullable();
             $table->timestamps();
         });
     }

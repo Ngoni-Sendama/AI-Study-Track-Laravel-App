@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('flash_cards', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('subject_id');
-            $table->string('question');
-            $table->string('answer');
+            $table->string('name');
+            $table->json('topics');
             $table->timestamps();
         });
     }

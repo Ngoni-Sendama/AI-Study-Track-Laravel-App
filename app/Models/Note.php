@@ -12,7 +12,7 @@ class Note extends Model
 {
     use SoftDeletes;
 
-    protected $fillable = ['subject_id', 'note_content'];
+    protected $fillable = ['subject_id', 'note_content', 'link'];
 
     public function subject(): BelongsTo
     {

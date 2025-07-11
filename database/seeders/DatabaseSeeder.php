@@ -14,17 +14,19 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::factory()->create([
-            'name' => 'Ngoni',
-            'email' => 'ngoni@gmail.com',
-            'password' => Hash::make('12341234'),
-        ]);
-        User::factory()->create([
-            'name' => 'Shalom',
-            'email' => 'shalom@gmail.com',
-            'password' => Hash::make('12341234'),
-        ]);
+      
+        $this->call(UsersTableSeeder::class);
+        $this->call(SubjectsTableSeeder::class);
+        $this->call(TopicsTableSeeder::class);
+        $this->call(ExamsTableSeeder::class);
+        $this->call(QuestionSetsTableSeeder::class);
+        $this->call(QuestionsTableSeeder::class);
+        $this->call(OptionsTableSeeder::class);
+        $this->call(ExamAnswersTableSeeder::class);
+        $this->call(PermissionsTableSeeder::class);
+        $this->call(ModelHasPermissionsTableSeeder::class);
+        $this->call(ModelHasRolesTableSeeder::class);
+        $this->call(RolesTableSeeder::class);
+        $this->call(RoleHasPermissionsTableSeeder::class);
     }
 }
