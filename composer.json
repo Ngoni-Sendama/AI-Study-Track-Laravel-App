@@ -22,7 +22,7 @@
         "laravel/tinker": "^2.9",
         "leandrocfe/filament-apex-charts": "^3.1",
         "marcelweidum/filament-expiration-notice": "^1.0",
-        "openai-php/client": "*",
+        "openai-php/client": "^0.14.0",
         "orangehill/iseed": "^3.1",
         "rmsramos/activitylog": "^1.0",
         "smalot/pdfparser": "^2.11",

@@ -3,6 +3,8 @@
 namespace App\Filament\Resources;
 
 use Filament\Forms;
+use OpenAI;
+use App\Models\FlashCardQuestion;
 use Filament\Tables;
 use App\Models\Topic;
 use App\Models\Subject;
@@ -18,6 +20,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\FlashCardResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\FlashCardResource\RelationManagers;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Section;
 
 class FlashCardResource extends Resource
@@ -59,6 +62,19 @@ class FlashCardResource extends Resource
                                         $topic->topics => "{$topic->unit} - {$topic->topics}"
                                     ])
                             ),
+
+
+                            Section::make()
+                            ->visibleOn('view')
+                            ->schema([
+                                Repeater::make('questions')
+                                ->relationship('questions')
+                                ->schema([
+                                           Forms\Components\TextInput::make('question'),
+                                           Forms\Components\TextInput::make('answer'),
+                                ])
+
+                            ])
                     ])
             ]);
     }
@@ -91,9 +107,66 @@ class FlashCardResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+
+
                 Tables\Actions\Action::make('generate')
-                ->color('success')
-                ->action(),
+                    ->label('Generate Flashcards')
+                    ->color('success')
+                    ->icon('heroicon-o-sparkles')
+                    ->requiresConfirmation()
+                    ->action(function ($record) {
+                        // Prepare prompt based on subject and topics
+                        $subject = $record->subject->name;
+                        $topics = implode(', ', $record->topics);
+
+                        $prompt = <<<EOT
+                            Generate 5 simple flashcard-style questions and answers based on the subject "$subject" and the following topics: $topics.
+
+                            Respond in JSON format like this:
+                            [
+                            {"question": "...", "answer": "..."},
+                            {"question": "...", "answer": "..."},
+                            ...
+                            ]
+                            EOT;
+
+                        // Create OpenAI client
+                        $client = OpenAI::client(env('OPENAI_API_KEY'));
+
+                        $response = $client->chat()->create([
+                            'model' => 'gpt-3.5-turbo',
+                            'messages' => [
+                                ['role' => 'system', 'content' => 'You are a helpful AI that generates flashcards.'],
+                                ['role' => 'user', 'content' => $prompt],
+                            ],
+                        ]);
+
+                        // Parse and store the questions
+                        $content = $response->choices[0]->message->content;
+
+                        try {
+                            $questions = json_decode($content, true);
+
+                            foreach ($questions as $item) {
+                                FlashCardQuestion::create([
+                                    'flash_card_id' => $record->id,
+                                    'question' => $item['question'],
+                                    'answer' => $item['answer'],
+                                ]);
+                            }
+                        } catch (\Exception $e) {
+                            throw \Filament\Notifications\Notification::make()
+                                ->title('Failed to generate flashcards')
+                                ->body('The response format may be invalid.')
+                                ->danger();
+                        }
+
+                        \Filament\Notifications\Notification::make()
+                            ->title('Flashcards Generated')
+                            ->body('5 flashcard questions have been added.')
+                            ->success()
+                            ->send();
+                    }),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
