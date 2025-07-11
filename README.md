@@ -41,6 +41,7 @@ more images check them [here](./images/)
 - [ ] Use AI to show weak areas (units/topics with poor performance). And Study Recommendations
 - [ ] Exams Perfomance, Subject Perfomance, Best Marks Perfomance, Next Date Exam, Topics with weaknesses
 - [ ] Send Alerts
+- [ ] change all generations of codes to OpenAI
 
 ## Admin Reg
 - [ ] regenerate Policies `php artisan shield:generate --all`
