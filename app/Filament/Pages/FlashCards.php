@@ -12,6 +12,8 @@ class FlashCards extends Page
     protected static ?string $navigationIcon = 'hugeicons-cards-02';
 
     protected static string $view = 'filament.pages.flash-cards';
+    // protected static string $slug = 'flash-cards';
+    protected static ?string $slug = 'custom-url-slug';
     // protected static bool $shouldRegisterNavigation = false;
     protected function getHeaderActions(): array
     {

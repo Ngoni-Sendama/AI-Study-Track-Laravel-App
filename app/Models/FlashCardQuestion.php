@@ -14,4 +14,9 @@ class FlashCardQuestion extends Model
         'question',
         'answer'
     ];
+
+    public function flashCard()
+    {
+        return $this->belongsTo(FlashCard::class);
+    }
 }

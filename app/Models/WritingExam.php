@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class WritingExam extends Model
 {
     use HasFactory;
-    protected $fillable=[
+    protected $fillable = [
         'user_id',
         'subject_id',
         'topics',
@@ -19,4 +19,14 @@ class WritingExam extends Model
         'answer', // from user
         'analysis', // from AI
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function subject()
+    {
+        return $this->belongsTo(Subject::class);
+    }
 }
