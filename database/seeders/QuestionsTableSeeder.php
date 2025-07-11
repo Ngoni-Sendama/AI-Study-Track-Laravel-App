@@ -25,6 +25,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design principle emphasizes creating modules that are loosely coupled and highly cohesive?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -34,6 +35,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Top-down design involves:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -43,6 +45,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which type of coupling occurs when changes in one module require changes in many other modules?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -52,6 +55,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Cohesion refers to the degree to which:',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -61,6 +65,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'A structure chart is used to:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -70,6 +75,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
             'question_text' => 'A data flow diagram (DFD) shows:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -79,6 +85,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design principle states that a module should only depend on stable abstractions, not concrete implementations?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -88,6 +95,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the purpose of functional decomposition?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -97,6 +105,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which type of cohesion occurs when modules share common data?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -106,6 +115,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the main goal of software design?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -115,6 +125,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design pattern is used to allow multiple classes to access the same interface?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -124,6 +135,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the role of a specification in software design?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -133,6 +145,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design principle emphasizes designing for change by isolating volatile parts of a system?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -142,6 +155,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the difference between cohesion and coupling?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -151,6 +165,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which type of coupling occurs when a module accesses the private data of another module?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -160,6 +175,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the purpose of a data dictionary?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -169,6 +185,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design principle states that a module should not know about the details of the modules it uses?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -178,6 +195,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the difference between a structured design and an object-oriented design?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -187,6 +205,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design pattern is used to create objects without specifying the exact class of the object to be created?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -196,6 +215,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the role of a software architect in the design process?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -205,6 +225,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design principle emphasizes the importance of using well-defined and consistent interfaces?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -214,6 +235,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the purpose of a design review?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -223,6 +245,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design pattern is used to provide a single point of access to a global resource?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -232,6 +255,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the difference between a static design and a dynamic design?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -241,6 +265,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design principle emphasizes the importance of designing for testability?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -250,6 +275,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the purpose of a design guideline?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -259,6 +285,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design pattern is used to decouple the implementation of a class from its interface?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -268,6 +295,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the difference between a top-down and a bottom-up design approach?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -277,6 +305,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'Which design principle emphasizes the importance of designing for extensibility?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -286,6 +315,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 1,
                 'question_text' => 'What is the role of a software designer in the software development process?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:16:46',
                 'updated_at' => '2025-01-26 18:16:46',
             ),
@@ -295,6 +325,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which command is used to create a new Flutter project?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -304,6 +335,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the root widget in a Flutter app?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -313,6 +345,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to display text?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -322,6 +355,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the purpose of the InputDecoration widget?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -331,6 +365,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create a floating action button?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -340,6 +375,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the difference between a raised button and a flat button?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -349,6 +385,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to display a snackbar?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -358,6 +395,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the purpose of the Expanded widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -367,6 +405,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to switch between two possible states?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -376,6 +415,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the difference between a switch and a toggle button?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -385,6 +425,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create an elevated button?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -394,6 +435,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the purpose of the Theme widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -403,6 +445,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create a list of items?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -412,6 +455,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the difference between a ListView and a GridView?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -421,6 +465,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create a page view?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -430,6 +475,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the purpose of the Navigator widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -439,6 +485,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create a custom animation?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -448,6 +495,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the difference between a value animator and a tween animator?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -457,6 +505,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to detect gestures?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -466,6 +515,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the difference between a tap gesture and a long press gesture?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -475,6 +525,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create a custom layout?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -484,6 +535,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the difference between a Row and a Column?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -493,6 +545,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create a stack of widgets?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -502,6 +555,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the purpose of the ShaderMask widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -511,6 +565,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create a custom paint?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -520,6 +575,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the difference between a gradient and a radial gradient?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -529,6 +585,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'Which widget is used to create a custom transform?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -538,6 +595,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 2,
                 'question_text' => 'What is the purpose of the Semantics widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:20:08',
                 'updated_at' => '2025-01-26 18:20:08',
             ),
@@ -547,6 +605,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which operating system is required to run Android Studio?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -556,6 +615,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the terminal command to install Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -565,6 +625,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which plugin is used to integrate Flutter into Android Studio?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -574,6 +635,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the purpose of the "pubspec.yaml" file in a Flutter project?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -583,6 +645,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which framework is used for building the user interface in Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -592,6 +655,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the difference between a "StatelessWidget" and a "StatefulWidget"?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -601,6 +665,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which widget is used to add padding to a child widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -610,6 +675,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the purpose of the "Build" method in a Flutter widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -619,6 +685,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which widget is used to organize child widgets horizontally?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -628,6 +695,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the "setState" method used for?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -637,6 +705,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which package is used for networking in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -646,6 +715,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the "FutureBuilder" widget used for?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -655,6 +725,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which type system does Flutter use?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -664,6 +735,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the purpose of the "dartanalyzer" tool?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -673,6 +745,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which tool is used for packaging and deploying Flutter apps?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -682,6 +755,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the difference between a "debug" and a "release" build in Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -691,6 +765,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which package is used for managing state in Flutter?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -700,6 +775,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the purpose of the "ChangeNotifier" class?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -709,6 +785,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which widget is used to create custom animations in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -718,6 +795,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the "Tween" class used for in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -727,6 +805,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which widget is used to create interactive lists in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -736,6 +815,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the purpose of the "GestureDetector" widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -745,6 +825,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which package is used for internationalization in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -754,6 +835,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the purpose of the "MaterialApp" widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -763,6 +845,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which package is used for testing in Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -772,6 +855,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the difference between a "unit test" and an "integration test"?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -781,6 +865,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which widget is used to create custom layouts in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -790,6 +875,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the "InheritedWidget" class used for?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -799,6 +885,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'Which package is used for routing and navigation in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:12',
                 'updated_at' => '2025-01-26 18:23:12',
             ),
@@ -808,6 +895,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 3,
                 'question_text' => 'What is the purpose of the "CupertinoTheme" widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:23:13',
                 'updated_at' => '2025-01-26 18:23:13',
             ),
@@ -817,6 +905,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which of the following is a key challenge in managing information?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -826,6 +915,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the term for the physical location where data is stored?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -835,6 +925,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which type of storage technology uses solid-state media to store data?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -844,6 +935,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the name of the interface between the host and the storage system?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -853,6 +945,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which component of a host computer is responsible for controlling data transfer between the host and the storage system?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -862,6 +955,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the purpose of a raid array?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -871,6 +965,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which RAID level provides the highest level of data protection?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -880,6 +975,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the term for the process of managing the flow of data throughout its lifecycle?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -889,6 +985,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which of the following is a benefit of cloud storage?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -898,6 +995,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the purpose of a storage system cache?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -907,6 +1005,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which type of storage is typically used for long-term data storage?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -916,6 +1015,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the name of the software that manages the storage system?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -925,6 +1025,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which of the following is a metric for measuring disk drive performance?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -934,6 +1035,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the purpose of a prefetch operation?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -943,6 +1045,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which storage system architecture provides the best scalability?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -952,6 +1055,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the term for the process of copying data from a primary storage location to a secondary location?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -961,6 +1065,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which of the following is a type of data backup?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:13',
                 'updated_at' => '2025-01-26 18:26:13',
             ),
@@ -970,6 +1075,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the purpose of data deduplication?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -979,6 +1085,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which of the following is a benefit of using a storage virtualization layer?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -988,6 +1095,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the name of the protocol used to connect storage devices to a host computer?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -997,6 +1105,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which type of disk drive is typically used in high-performance computing environments?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1006,6 +1115,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the term for the process of dividing data into multiple blocks?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1015,6 +1125,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
             'question_text' => 'Which of the following is a benefit of using solid-state drives (SSDs)?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1024,6 +1135,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the purpose of a storage controller?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1033,6 +1145,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which of the following is a type of storage array?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1042,6 +1155,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the name of the technology used to protect data from unauthorized access?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1051,6 +1165,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which of the following is a best practice for data security?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1060,6 +1175,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the purpose of a data warehouse?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1069,6 +1185,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'Which of the following is a type of data analytics?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1078,6 +1195,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 4,
                 'question_text' => 'What is the purpose of data mining?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:26:14',
                 'updated_at' => '2025-01-26 18:26:14',
             ),
@@ -1087,6 +1205,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to display a single line of read-only text?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1096,6 +1215,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What widget allows the user to input text?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1105,6 +1225,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to create a raised button with a shadow?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1114,6 +1235,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What widget is used to create a flat button with no shadow?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1123,6 +1245,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to display a simple message to the user?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1132,6 +1255,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What widget is used to create a switch that can be toggled between two states?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1141,6 +1265,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to create a toggle button that can be pressed to select and unselect an option?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1150,6 +1275,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What widget is used to create a button with a circular shape?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1159,6 +1285,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to represent a hierarchy of widgets?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1168,6 +1295,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What type of widget is a Text widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1177,6 +1305,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which property is used to set the text of a Text widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1186,6 +1315,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to set the color of a Text widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1195,6 +1325,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which property is used to set the size of a Text widget?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1204,6 +1335,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to set the alignment of a Text widget?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1213,6 +1345,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to wrap a widget in a container with a fixed height and width?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1222,6 +1355,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to set the height of a Container widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1231,6 +1365,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which property is used to set the width of a Container widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1240,6 +1375,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to set the background color of a Container widget?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1249,6 +1385,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which property is used to set the padding around the content of a Container widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1258,6 +1395,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to set the margin around the content of a Container widget?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1267,6 +1405,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to create a layout that scrolls vertically?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1276,6 +1415,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to specify the data source for a ListView widget?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1285,6 +1425,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to create a layout that scrolls horizontally?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1294,6 +1435,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to specify the number of columns in a GridView widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1303,6 +1445,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to create a layout that aligns its children vertically?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1312,6 +1455,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to specify the main axis alignment for a Column widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1321,6 +1465,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to create a layout that aligns its children horizontally?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1330,6 +1475,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to specify the main axis alignment for a Row widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1339,6 +1485,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'Which widget is used to create a scaffold that provides a basic structure for a Flutter app?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1348,6 +1495,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 5,
                 'question_text' => 'What property is used to specify the title of a Scaffold widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:29:06',
                 'updated_at' => '2025-01-26 18:29:06',
             ),
@@ -1357,6 +1505,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'Which of the following is a type of magnetic storage device?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1366,6 +1515,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'RAID stands for:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1375,6 +1525,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'The process of moving infrequently accessed data from primary storage to secondary storage is called:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1384,6 +1535,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'Which of the following is a key challenge in managing information?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1393,6 +1545,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'The evolution of storage technology includes the following phases:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1402,6 +1555,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'A disk drive consists of the following logical components:',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1411,6 +1565,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'Which of the following is a parameter used to evaluate disk drive performance?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1420,6 +1575,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'The host system\'s logical components include:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1429,6 +1585,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'Which of the following is a component of the storage system environment?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1438,6 +1595,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 6,
                 'question_text' => 'The information lifecycle includes the following stages:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-26 18:39:30',
                 'updated_at' => '2025-01-26 18:39:30',
             ),
@@ -1447,6 +1605,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 5 and 7?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1456,6 +1615,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 10 and 15?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1465,6 +1625,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 20 and 25?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1474,6 +1635,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 30 and 35?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1483,6 +1645,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 40 and 45?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1492,6 +1655,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 5 and 3?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1501,6 +1665,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 10 and 4?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1510,6 +1675,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 15 and 5?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1519,6 +1685,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 20 and 6?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1528,6 +1695,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 25 and 7?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1537,6 +1705,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 10 and 20?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1546,6 +1715,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 5 and 10?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1555,6 +1725,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 15 and 25?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1564,6 +1735,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 10 and 15?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1573,6 +1745,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 20 and 30?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1582,6 +1755,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 5 and 20?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1591,6 +1765,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 25 and 35?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1600,6 +1775,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 10 and 25?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1609,6 +1785,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the sum of 30 and 40?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1618,6 +1795,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 7,
                 'question_text' => 'What is the product of 5 and 30?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:16:27',
                 'updated_at' => '2025-01-27 17:16:27',
             ),
@@ -1627,6 +1805,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the sum of 5 and 7?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1636,6 +1815,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the result of 12 plus 11?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1645,6 +1825,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the total of 15 and 10?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1654,6 +1835,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the sum of 20 and 15?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1663,6 +1845,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the total of 25 and 12?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1672,6 +1855,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the sum of 30 and 18?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1681,6 +1865,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the total of 35 and 21?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1690,6 +1875,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the sum of 40 and 24?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1699,6 +1885,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the total of 45 and 27?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1708,6 +1895,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 8,
                 'question_text' => 'What is the sum of 50 and 30?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:19:38',
                 'updated_at' => '2025-01-27 17:19:38',
             ),
@@ -1717,6 +1905,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 9,
                 'question_text' => 'What is the sum of 4 and 6?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:24:41',
                 'updated_at' => '2025-01-27 17:24:41',
             ),
@@ -1726,6 +1915,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 9,
                 'question_text' => 'What is the sum of 7 and 2?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:24:41',
                 'updated_at' => '2025-01-27 17:24:41',
             ),
@@ -1735,6 +1925,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 9,
                 'question_text' => 'What is the sum of 5 and 9?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:24:41',
                 'updated_at' => '2025-01-27 17:24:41',
             ),
@@ -1744,6 +1935,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 9,
                 'question_text' => 'What is the sum of 3 and 8?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:24:41',
                 'updated_at' => '2025-01-27 17:24:41',
             ),
@@ -1753,6 +1945,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 9,
                 'question_text' => 'What is the sum of 6 and 7?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:24:41',
                 'updated_at' => '2025-01-27 17:24:41',
             ),
@@ -1762,6 +1955,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 10,
                 'question_text' => 'Find the sum of 4 and 6:',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:32:51',
                 'updated_at' => '2025-01-27 17:32:51',
             ),
@@ -1771,6 +1965,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 10,
                 'question_text' => 'What is the sum of 2 and 8?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:32:51',
                 'updated_at' => '2025-01-27 17:32:51',
             ),
@@ -1780,6 +1975,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 10,
                 'question_text' => 'Find the sum of 5 and 5:',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:32:51',
                 'updated_at' => '2025-01-27 17:32:51',
             ),
@@ -1789,6 +1985,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 10,
                 'question_text' => 'What is the sum of 3 and 7?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:32:51',
                 'updated_at' => '2025-01-27 17:32:51',
             ),
@@ -1798,6 +1995,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 10,
                 'question_text' => 'Find the sum of 1 and 9:',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:32:51',
                 'updated_at' => '2025-01-27 17:32:51',
             ),
@@ -1807,6 +2005,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 11,
                 'question_text' => 'What is the sum of 10 and 15?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:42:55',
                 'updated_at' => '2025-01-27 17:42:55',
             ),
@@ -1816,6 +2015,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 11,
                 'question_text' => 'What is the value of x in the equation 2x + 5 = 11?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:42:55',
                 'updated_at' => '2025-01-27 17:42:55',
             ),
@@ -1825,6 +2025,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 11,
                 'question_text' => 'Which of the following is not a type of cloud?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:42:55',
                 'updated_at' => '2025-01-27 17:42:55',
             ),
@@ -1834,6 +2035,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 11,
                 'question_text' => 'What is the capital of France?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:42:55',
                 'updated_at' => '2025-01-27 17:42:55',
             ),
@@ -1843,6 +2045,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 11,
                 'question_text' => 'Which of the following is a renewable energy source?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:42:55',
                 'updated_at' => '2025-01-27 17:42:55',
             ),
@@ -1852,6 +2055,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 12,
                 'question_text' => 'Which of the following is NOT a desired characteristic of a software process?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:46:04',
                 'updated_at' => '2025-01-27 17:46:04',
             ),
@@ -1861,6 +2065,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 12,
                 'question_text' => 'In the prototyping model:',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:46:04',
                 'updated_at' => '2025-01-27 17:46:04',
             ),
@@ -1870,6 +2075,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 12,
                 'question_text' => 'Which design principle states that modules should be independent and loosely coupled?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:46:04',
                 'updated_at' => '2025-01-27 17:46:04',
             ),
@@ -1879,6 +2085,7 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 12,
                 'question_text' => 'The top-down design strategy involves:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:46:05',
                 'updated_at' => '2025-01-27 17:46:05',
             ),
@@ -1888,1709 +2095,1599 @@ class QuestionsTableSeeder extends Seeder
                 'question_set_id' => 12,
                 'question_text' => 'A data flow diagram is used to represent:',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-27 17:46:05',
                 'updated_at' => '2025-01-27 17:46:05',
             ),
             208 => 
             array (
-                'id' => 209,
-                'question_set_id' => 13,
-                'question_text' => 'Which of the following is NOT a type of customer orientation?',
-                'correct_answer' => 'C',
-                'created_at' => '2025-01-28 08:55:46',
-                'updated_at' => '2025-01-28 08:55:46',
-            ),
-            209 => 
-            array (
-                'id' => 210,
-                'question_set_id' => 13,
-                'question_text' => 'The customer value proposition focuses on:',
-                'correct_answer' => 'A',
-                'created_at' => '2025-01-28 08:55:46',
-                'updated_at' => '2025-01-28 08:55:46',
-            ),
-            210 => 
-            array (
-                'id' => 211,
-                'question_set_id' => 13,
-                'question_text' => 'Which of the following is a component of the marketing environment?',
-                'correct_answer' => 'D',
-                'created_at' => '2025-01-28 08:55:46',
-                'updated_at' => '2025-01-28 08:55:46',
-            ),
-            211 => 
-            array (
-                'id' => 212,
-                'question_set_id' => 13,
-            'question_text' => 'Integrated marketing communications (IMC) involves:',
-                'correct_answer' => 'A',
-                'created_at' => '2025-01-28 08:55:46',
-                'updated_at' => '2025-01-28 08:55:46',
-            ),
-            212 => 
-            array (
-                'id' => 213,
-                'question_set_id' => 13,
-                'question_text' => 'The sales function is responsible for:',
-                'correct_answer' => 'A',
-                'created_at' => '2025-01-28 08:55:46',
-                'updated_at' => '2025-01-28 08:55:46',
-            ),
-            213 => 
-            array (
                 'id' => 214,
                 'question_set_id' => 14,
                 'question_text' => 'Which of the following is the core concept of marketing management?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 10:08:56',
                 'updated_at' => '2025-01-28 10:08:56',
             ),
-            214 => 
+            209 => 
             array (
                 'id' => 215,
                 'question_set_id' => 14,
                 'question_text' => 'The marketing process involves which of the following steps?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 10:08:56',
                 'updated_at' => '2025-01-28 10:08:56',
             ),
-            215 => 
+            210 => 
             array (
                 'id' => 216,
                 'question_set_id' => 14,
                 'question_text' => 'Which type of marketing orientation focuses on creating products that meet the specific needs of individual customers?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 10:08:56',
                 'updated_at' => '2025-01-28 10:08:56',
             ),
-            216 => 
+            211 => 
             array (
                 'id' => 217,
                 'question_set_id' => 14,
                 'question_text' => 'The marketing mix refers to the combination of which elements?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 10:08:56',
                 'updated_at' => '2025-01-28 10:08:56',
             ),
-            217 => 
+            212 => 
             array (
                 'id' => 218,
                 'question_set_id' => 14,
                 'question_text' => 'Which of the following is a key component of customer value maximization strategies?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 10:08:56',
                 'updated_at' => '2025-01-28 10:08:56',
             ),
-            218 => 
+            213 => 
             array (
                 'id' => 219,
                 'question_set_id' => 15,
                 'question_text' => 'Which of the following is NOT a step in installing Flutter?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:16:29',
                 'updated_at' => '2025-01-28 14:16:29',
             ),
-            219 => 
+            214 => 
             array (
                 'id' => 220,
                 'question_set_id' => 15,
                 'question_text' => 'What is the primary programming language used with Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:16:29',
                 'updated_at' => '2025-01-28 14:16:29',
             ),
-            220 => 
+            215 => 
             array (
                 'id' => 221,
                 'question_set_id' => 15,
                 'question_text' => 'Which plugin needs to be installed in Android Studio to enable Flutter development?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:16:29',
                 'updated_at' => '2025-01-28 14:16:29',
             ),
-            221 => 
+            216 => 
             array (
                 'id' => 222,
                 'question_set_id' => 15,
                 'question_text' => 'What is the core of Flutter\'s declarative UI structure?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:16:29',
                 'updated_at' => '2025-01-28 14:16:29',
             ),
-            222 => 
+            217 => 
             array (
                 'id' => 223,
                 'question_set_id' => 15,
                 'question_text' => 'Which of the following is a key component of Flutter\'s architecture?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:16:29',
                 'updated_at' => '2025-01-28 14:16:29',
             ),
-            223 => 
+            218 => 
             array (
                 'id' => 224,
                 'question_set_id' => 16,
                 'question_text' => 'If you have three numbers: 5, 7, and 3, what is their sum?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:20:20',
                 'updated_at' => '2025-01-28 14:20:20',
             ),
-            224 => 
+            219 => 
             array (
                 'id' => 225,
                 'question_set_id' => 16,
                 'question_text' => 'What is the product of the numbers 4 and 6?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:20:20',
                 'updated_at' => '2025-01-28 14:20:20',
             ),
-            225 => 
+            220 => 
             array (
                 'id' => 226,
                 'question_set_id' => 16,
                 'question_text' => 'If the sum of three numbers is 21 and two of the numbers are 8 and 5, what is the third number?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:20:20',
                 'updated_at' => '2025-01-28 14:20:20',
             ),
-            226 => 
+            221 => 
             array (
                 'id' => 227,
                 'question_set_id' => 16,
                 'question_text' => 'What is the product of the numbers 9 and 3?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:20:20',
                 'updated_at' => '2025-01-28 14:20:20',
             ),
-            227 => 
+            222 => 
             array (
                 'id' => 228,
                 'question_set_id' => 16,
                 'question_text' => 'If the sum of three numbers is 18 and two of the numbers are 7 and 4, what is the third number?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 14:20:20',
                 'updated_at' => '2025-01-28 14:20:20',
             ),
-            228 => 
+            223 => 
             array (
                 'id' => 229,
                 'question_set_id' => 17,
                 'question_text' => 'Which of the following is NOT a part of the marketing mix?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            229 => 
+            224 => 
             array (
                 'id' => 230,
                 'question_set_id' => 17,
                 'question_text' => 'What is the final step in the marketing process?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            230 => 
+            225 => 
             array (
                 'id' => 231,
                 'question_set_id' => 17,
                 'question_text' => 'Which orientation focuses on making superior products?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            231 => 
+            226 => 
             array (
                 'id' => 232,
                 'question_set_id' => 17,
                 'question_text' => 'Which of the following is a macro environmental factor?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            232 => 
+            227 => 
             array (
                 'id' => 233,
                 'question_set_id' => 17,
                 'question_text' => 'What is the process of dividing a market into distinct groups of buyers called?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            233 => 
+            228 => 
             array (
                 'id' => 234,
                 'question_set_id' => 17,
                 'question_text' => 'Which of the following is NOT a stage in the customer life cycle?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            234 => 
+            229 => 
             array (
                 'id' => 235,
                 'question_set_id' => 17,
                 'question_text' => 'Which strategy focuses on keeping customers by offering them more value?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            235 => 
+            230 => 
             array (
                 'id' => 236,
                 'question_set_id' => 17,
                 'question_text' => 'Which of the following is NOT a part of the framework for competitive analysis?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            236 => 
+            231 => 
             array (
                 'id' => 237,
                 'question_set_id' => 17,
                 'question_text' => 'What is the study of people, and organizations buy and dispose of goods, services, experiences called?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            237 => 
+            232 => 
             array (
                 'id' => 238,
                 'question_set_id' => 17,
                 'question_text' => 'Which of the following is NOT a type of organizational buying behaviour?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-28 16:23:23',
                 'updated_at' => '2025-01-28 16:23:23',
             ),
-            238 => 
+            233 => 
             array (
                 'id' => 239,
                 'question_set_id' => 18,
                 'question_text' => 'Which of the following is NOT a key benefit of Flutter?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 18:56:42',
                 'updated_at' => '2025-01-29 18:56:42',
             ),
-            239 => 
+            234 => 
             array (
                 'id' => 240,
                 'question_set_id' => 18,
                 'question_text' => 'Which component serves as the foundation for building Flutter widgets?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 18:56:42',
                 'updated_at' => '2025-01-29 18:56:42',
             ),
-            240 => 
+            235 => 
             array (
                 'id' => 241,
                 'question_set_id' => 18,
                 'question_text' => 'What is the recommended file extension for Dart files in Flutter projects?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 18:56:42',
                 'updated_at' => '2025-01-29 18:56:42',
             ),
-            241 => 
+            236 => 
             array (
                 'id' => 242,
                 'question_set_id' => 18,
                 'question_text' => 'Which command is used to install the Flutter SDK?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 18:56:42',
                 'updated_at' => '2025-01-29 18:56:42',
             ),
-            242 => 
+            237 => 
             array (
                 'id' => 243,
                 'question_set_id' => 18,
                 'question_text' => 'What is the role of the "pubspec.yaml" file in Flutter projects?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 18:56:42',
                 'updated_at' => '2025-01-29 18:56:42',
             ),
-            243 => 
+            238 => 
             array (
                 'id' => 244,
                 'question_set_id' => 19,
                 'question_text' => 'What is the primary purpose of specimen collection from patients in a clinical setting?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            244 => 
+            239 => 
             array (
                 'id' => 245,
                 'question_set_id' => 19,
                 'question_text' => 'Which of the following is a common method of specimen collection in hospitals?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            245 => 
+            240 => 
             array (
                 'id' => 246,
                 'question_set_id' => 19,
                 'question_text' => 'What is the role of specimen collection in epidemiological investigations?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            246 => 
+            241 => 
             array (
                 'id' => 247,
                 'question_set_id' => 19,
                 'question_text' => 'Which professional is typically trained to handle epidemics and specimen collection?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            247 => 
+            242 => 
             array (
                 'id' => 248,
                 'question_set_id' => 19,
                 'question_text' => 'What is a crucial aspect of training for medical microbiologists handling epidemics?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            248 => 
+            243 => 
             array (
                 'id' => 249,
                 'question_set_id' => 19,
                 'question_text' => 'Which type of specimen is commonly collected from clinics for diagnostic purposes?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            249 => 
+            244 => 
             array (
                 'id' => 250,
                 'question_set_id' => 19,
                 'question_text' => 'What is the importance of proper labeling in specimen collection?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            250 => 
+            245 => 
             array (
                 'id' => 251,
                 'question_set_id' => 19,
                 'question_text' => 'Which tool is commonly used for collecting blood specimens?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            251 => 
+            246 => 
             array (
                 'id' => 252,
                 'question_set_id' => 19,
                 'question_text' => 'What is a key consideration when collecting specimens for epidemiological investigations?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            252 => 
+            247 => 
             array (
                 'id' => 253,
                 'question_set_id' => 19,
                 'question_text' => 'Which of the following is a standard procedure for handling specimens collected from patients with infectious diseases?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-29 19:03:49',
                 'updated_at' => '2025-01-29 19:03:49',
             ),
-            253 => 
+            248 => 
             array (
                 'id' => 254,
                 'question_set_id' => 20,
                 'question_text' => 'What is Flutter?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            254 => 
+            249 => 
             array (
                 'id' => 255,
                 'question_set_id' => 20,
                 'question_text' => 'Which of the following is the programming language used in Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            255 => 
+            250 => 
             array (
                 'id' => 256,
                 'question_set_id' => 20,
                 'question_text' => 'What is the main advantage of Flutter?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            256 => 
+            251 => 
             array (
                 'id' => 257,
                 'question_set_id' => 20,
                 'question_text' => 'To install Flutter, you need:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            257 => 
+            252 => 
             array (
                 'id' => 258,
                 'question_set_id' => 20,
                 'question_text' => 'What is the Flutter architecture based on?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            258 => 
+            253 => 
             array (
                 'id' => 259,
                 'question_set_id' => 20,
                 'question_text' => 'What is the purpose of the "pubspec.yaml" file in a Flutter project?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            259 => 
+            254 => 
             array (
                 'id' => 260,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is responsible for the application\'s user interface?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            260 => 
+            255 => 
             array (
                 'id' => 261,
                 'question_set_id' => 20,
                 'question_text' => 'What is the "Material" design system in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            261 => 
+            256 => 
             array (
                 'id' => 262,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a button in Flutter?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            262 => 
+            257 => 
             array (
                 'id' => 263,
                 'question_set_id' => 20,
                 'question_text' => 'What is the "Navigator" in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            263 => 
+            258 => 
             array (
                 'id' => 264,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a list in Flutter?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            264 => 
+            259 => 
             array (
                 'id' => 265,
                 'question_set_id' => 20,
                 'question_text' => 'What is the "dart:async" library used for in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            265 => 
+            260 => 
             array (
                 'id' => 266,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a custom widget in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            266 => 
+            261 => 
             array (
                 'id' => 267,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a text field in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            267 => 
+            262 => 
             array (
                 'id' => 268,
                 'question_set_id' => 20,
                 'question_text' => 'What is the "Provider" in Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            268 => 
+            263 => 
             array (
                 'id' => 269,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a navigation drawer in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            269 => 
+            264 => 
             array (
                 'id' => 270,
                 'question_set_id' => 20,
                 'question_text' => 'What is the "ThemeData" in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            270 => 
+            265 => 
             array (
                 'id' => 271,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a floating action button in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            271 => 
+            266 => 
             array (
                 'id' => 272,
                 'question_set_id' => 20,
                 'question_text' => 'What is the "setState" method used for in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            272 => 
+            267 => 
             array (
                 'id' => 273,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a custom paint in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            273 => 
+            268 => 
             array (
                 'id' => 274,
                 'question_set_id' => 20,
                 'question_text' => 'What is the "AssetBundle" in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            274 => 
+            269 => 
             array (
                 'id' => 275,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a snackbar in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            275 => 
+            270 => 
             array (
                 'id' => 276,
                 'question_set_id' => 20,
                 'question_text' => 'What is the "GestureDetector" in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            276 => 
+            271 => 
             array (
                 'id' => 277,
                 'question_set_id' => 20,
                 'question_text' => 'Which widget is used to create a list view builder in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-01-30 17:45:37',
                 'updated_at' => '2025-01-30 17:45:37',
             ),
-            277 => 
+            272 => 
             array (
                 'id' => 278,
                 'question_set_id' => 21,
                 'question_text' => 'Which programming language is primarily used for Flutter development?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:18',
                 'updated_at' => '2025-04-11 08:56:18',
             ),
-            278 => 
+            273 => 
             array (
                 'id' => 279,
                 'question_set_id' => 21,
                 'question_text' => 'Flutter is a UI toolkit developed by:',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:18',
                 'updated_at' => '2025-04-11 08:56:18',
             ),
-            279 => 
+            274 => 
             array (
                 'id' => 280,
                 'question_set_id' => 21,
                 'question_text' => 'What is the primary advantage of Flutter\'s "hot reload" feature?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:18',
                 'updated_at' => '2025-04-11 08:56:18',
             ),
-            280 => 
+            275 => 
             array (
                 'id' => 281,
                 'question_set_id' => 21,
                 'question_text' => 'Which of the following is a key feature of Flutter\'s architecture?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:18',
                 'updated_at' => '2025-04-11 08:56:18',
             ),
-            281 => 
+            276 => 
             array (
                 'id' => 282,
                 'question_set_id' => 21,
                 'question_text' => 'Which of the following is the command to create a new Flutter project?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:18',
                 'updated_at' => '2025-04-11 08:56:18',
             ),
-            282 => 
+            277 => 
             array (
                 'id' => 283,
                 'question_set_id' => 21,
                 'question_text' => 'Which tool is used for building and testing Flutter apps?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:18',
                 'updated_at' => '2025-04-11 08:56:18',
             ),
-            283 => 
+            278 => 
             array (
                 'id' => 284,
                 'question_set_id' => 21,
                 'question_text' => 'Which of the following is NOT a widget type in Flutter?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:18',
                 'updated_at' => '2025-04-11 08:56:18',
             ),
-            284 => 
+            279 => 
             array (
                 'id' => 285,
                 'question_set_id' => 21,
                 'question_text' => 'What is the purpose of the `pubspec.yaml` file in a Flutter project?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            285 => 
+            280 => 
             array (
                 'id' => 286,
                 'question_set_id' => 21,
                 'question_text' => 'Which widget is used to add padding around another widget in Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            286 => 
+            281 => 
             array (
                 'id' => 287,
                 'question_set_id' => 21,
                 'question_text' => 'What is the role of the Flutter Engine?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            287 => 
+            282 => 
             array (
                 'id' => 288,
                 'question_set_id' => 21,
                 'question_text' => 'What is the command to run a Flutter app on a connected device or emulator?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            288 => 
+            283 => 
             array (
                 'id' => 289,
                 'question_set_id' => 21,
                 'question_text' => 'Which of the following is the best way to handle asynchronous operations in Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            289 => 
+            284 => 
             array (
                 'id' => 290,
                 'question_set_id' => 21,
             'question_text' => 'What is the purpose of the `setState()` method in a Stateful Widget?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            290 => 
+            285 => 
             array (
                 'id' => 291,
                 'question_set_id' => 21,
                 'question_text' => 'What is the function of a GestureDetector widget?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            291 => 
+            286 => 
             array (
                 'id' => 292,
                 'question_set_id' => 21,
                 'question_text' => 'Which is the main function in Dart that starts the Flutter app?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            292 => 
+            287 => 
             array (
                 'id' => 293,
                 'question_set_id' => 21,
                 'question_text' => 'Which of the following is a layout widget in Flutter?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            293 => 
+            288 => 
             array (
                 'id' => 294,
                 'question_set_id' => 21,
                 'question_text' => 'Where would you typically place the Flutter SDK after downloading it?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            294 => 
+            289 => 
             array (
                 'id' => 295,
                 'question_set_id' => 21,
                 'question_text' => 'What does "Widget" mean in Flutter?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            295 => 
+            290 => 
             array (
                 'id' => 296,
                 'question_set_id' => 21,
                 'question_text' => 'The process of building Flutter for release requires to select a target. which one is not considered a target to release a Flutter Application?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            296 => 
+            291 => 
             array (
                 'id' => 297,
                 'question_set_id' => 21,
                 'question_text' => 'Which plugin is required to be install on Android Studio to work with Flutter development?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            297 => 
+            292 => 
             array (
                 'id' => 298,
                 'question_set_id' => 21,
             'question_text' => 'What is the purpose of the `build()` method in a Flutter widget?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            298 => 
+            293 => 
             array (
                 'id' => 299,
                 'question_set_id' => 21,
                 'question_text' => 'Which widget allows you to create a scrollable list of items?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            299 => 
+            294 => 
             array (
                 'id' => 300,
                 'question_set_id' => 21,
                 'question_text' => 'Which file contains platform specific configurations for Android Flutter project?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            300 => 
+            295 => 
             array (
                 'id' => 301,
                 'question_set_id' => 21,
                 'question_text' => 'In Flutter, what is the purpose of keys?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            301 => 
+            296 => 
             array (
                 'id' => 302,
                 'question_set_id' => 21,
                 'question_text' => 'Which component of Flutter directly communicates with the underlying operating system?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 08:56:19',
                 'updated_at' => '2025-04-11 08:56:19',
             ),
-            302 => 
+            297 => 
             array (
                 'id' => 303,
                 'question_set_id' => 22,
                 'question_text' => 'What is the correct sequence of events in software testing?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            303 => 
+            298 => 
             array (
                 'id' => 304,
                 'question_set_id' => 22,
                 'question_text' => 'Which of the following is a test oracle?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            304 => 
+            299 => 
             array (
                 'id' => 305,
                 'question_set_id' => 22,
                 'question_text' => 'Which of the following is NOT a type of test case?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            305 => 
+            300 => 
             array (
                 'id' => 306,
                 'question_set_id' => 22,
                 'question_text' => 'Which of the following is a test criterion?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            306 => 
+            301 => 
             array (
                 'id' => 307,
                 'question_set_id' => 22,
                 'question_text' => 'Which of the following is NOT a psychological factor that affects testing?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            307 => 
+            302 => 
             array (
                 'id' => 308,
                 'question_set_id' => 22,
                 'question_text' => 'Which of the following is a black-box testing technique?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            308 => 
+            303 => 
             array (
                 'id' => 309,
                 'question_set_id' => 22,
                 'question_text' => 'Which of the following is a white-box testing technique?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            309 => 
+            304 => 
             array (
                 'id' => 310,
                 'question_set_id' => 22,
                 'question_text' => 'Which level of testing is typically performed first?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            310 => 
+            305 => 
             array (
                 'id' => 311,
                 'question_set_id' => 22,
                 'question_text' => 'Which of the following is NOT a level of testing?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            311 => 
+            306 => 
             array (
                 'id' => 312,
                 'question_set_id' => 22,
                 'question_text' => 'Which of the following is a characteristic of good test cases?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 09:25:17',
                 'updated_at' => '2025-04-11 09:25:17',
             ),
-            312 => 
+            307 => 
             array (
                 'id' => 313,
                 'question_set_id' => 23,
                 'question_text' => 'Which of the following is a key challenge in managing information?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            313 => 
+            308 => 
             array (
                 'id' => 314,
                 'question_set_id' => 23,
                 'question_text' => 'What is the typical sequence of the information lifecycle?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            314 => 
+            309 => 
             array (
                 'id' => 315,
                 'question_set_id' => 23,
                 'question_text' => 'Which component regulates data transfer between the computer\'s RAM and the storage device?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            315 => 
+            310 => 
             array (
                 'id' => 316,
                 'question_set_id' => 23,
                 'question_text' => 'Which RAID level provides data striping without redundancy?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            316 => 
+            311 => 
             array (
                 'id' => 317,
                 'question_set_id' => 23,
                 'question_text' => 'In a RAID 1 configuration, data is:',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            317 => 
+            312 => 
             array (
                 'id' => 318,
                 'question_set_id' => 23,
                 'question_text' => 'Which RAID level uses block-level striping with distributed parity?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            318 => 
+            313 => 
             array (
                 'id' => 319,
                 'question_set_id' => 23,
                 'question_text' => 'What is the primary function of an intelligent storage system?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            319 => 
+            314 => 
             array (
                 'id' => 320,
                 'question_set_id' => 23,
                 'question_text' => 'Which of the following is a logical component of the host in a storage system environment?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            320 => 
+            315 => 
             array (
                 'id' => 321,
                 'question_set_id' => 23,
                 'question_text' => 'Which of the following is a key component of a disk drive?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            321 => 
+            316 => 
             array (
                 'id' => 322,
                 'question_set_id' => 23,
                 'question_text' => 'Which RAID level provides data striping with double parity?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-04-11 10:42:07',
                 'updated_at' => '2025-04-11 10:42:07',
             ),
-            322 => 
+            317 => 
             array (
                 'id' => 323,
                 'question_set_id' => 24,
             'question_text' => 'What is the primary function of a Network Attached Storage (NAS) device?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:14',
                 'updated_at' => '2025-05-28 13:47:14',
             ),
-            323 => 
+            318 => 
             array (
                 'id' => 324,
                 'question_set_id' => 24,
                 'question_text' => 'Which of the following is generally considered a benefit of using a NAS device compared to a general-purpose server for file sharing?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:14',
                 'updated_at' => '2025-05-28 13:47:14',
             ),
-            324 => 
+            319 => 
             array (
                 'id' => 325,
                 'question_set_id' => 24,
                 'question_text' => 'In a NAS environment, file I/O operations are typically handled at the:',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:14',
                 'updated_at' => '2025-05-28 13:47:14',
             ),
-            325 => 
+            320 => 
             array (
                 'id' => 326,
                 'question_set_id' => 24,
                 'question_text' => 'Which component is NOT typically found within a NAS device?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:14',
                 'updated_at' => '2025-05-28 13:47:14',
             ),
-            326 => 
+            321 => 
             array (
                 'id' => 327,
                 'question_set_id' => 24,
                 'question_text' => 'Which of the following is a common file sharing protocol used by NAS devices?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:14',
                 'updated_at' => '2025-05-28 13:47:14',
             ),
-            327 => 
+            322 => 
             array (
                 'id' => 328,
                 'question_set_id' => 24,
             'question_text' => 'What is the key characteristic of Content Addressed Storage (CAS)?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            328 => 
+            323 => 
             array (
                 'id' => 329,
                 'question_set_id' => 24,
                 'question_text' => 'Which type of data is most suitable for storage in a CAS system?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            329 => 
+            324 => 
             array (
                 'id' => 330,
                 'question_set_id' => 24,
                 'question_text' => 'Which of the following is a feature or benefit of CAS?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            330 => 
+            325 => 
             array (
                 'id' => 331,
                 'question_set_id' => 24,
                 'question_text' => 'In a CAS architecture, what is responsible for calculating the content address of a stored object?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            331 => 
+            326 => 
             array (
                 'id' => 332,
                 'question_set_id' => 24,
                 'question_text' => 'How is an object typically retrieved from a CAS system?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            332 => 
+            327 => 
             array (
                 'id' => 333,
                 'question_set_id' => 24,
                 'question_text' => 'Compared to a general purpose server, a NAS device is typically:',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            333 => 
+            328 => 
             array (
                 'id' => 334,
                 'question_set_id' => 24,
                 'question_text' => 'A NAS device commonly uses what type of operating system?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            334 => 
+            329 => 
             array (
                 'id' => 335,
                 'question_set_id' => 24,
                 'question_text' => 'Which of the following is NOT a common file sharing protocol used on NAS devices?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            335 => 
+            330 => 
             array (
                 'id' => 336,
                 'question_set_id' => 24,
                 'question_text' => 'What is a common I/O operation performed by a NAS device?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            336 => 
+            331 => 
             array (
                 'id' => 337,
                 'question_set_id' => 24,
                 'question_text' => 'What is the main purpose of archiving data?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            337 => 
+            332 => 
             array (
                 'id' => 338,
                 'question_set_id' => 24,
             'question_text' => 'Which of these is a key advantage of Content Addressed Storage (CAS)?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            338 => 
+            333 => 
             array (
                 'id' => 339,
                 'question_set_id' => 24,
             'question_text' => 'What is the role of metadata in Content Addressed Storage (CAS)?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            339 => 
+            334 => 
             array (
                 'id' => 340,
                 'question_set_id' => 24,
                 'question_text' => 'Which of the following is a characteristic of "fixed content" in the context of CAS?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            340 => 
+            335 => 
             array (
                 'id' => 341,
                 'question_set_id' => 24,
                 'question_text' => 'What is object storage, as related to CAS?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            341 => 
+            336 => 
             array (
                 'id' => 342,
                 'question_set_id' => 24,
                 'question_text' => 'What is a key advantage of using object storage?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            342 => 
+            337 => 
             array (
                 'id' => 343,
                 'question_set_id' => 24,
                 'question_text' => 'Which component handles the network connectivity for a NAS device?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            343 => 
+            338 => 
             array (
                 'id' => 344,
                 'question_set_id' => 24,
                 'question_text' => 'What does the acronym WORM stand for in the context of CAS?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            344 => 
+            339 => 
             array (
                 'id' => 345,
                 'question_set_id' => 24,
                 'question_text' => 'What is a \'content hash\'?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            345 => 
+            340 => 
             array (
                 'id' => 346,
                 'question_set_id' => 24,
                 'question_text' => 'Which of the following is NOT a benefit of using a NAS device?',
                 'correct_answer' => 'D',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            346 => 
+            341 => 
             array (
                 'id' => 347,
                 'question_set_id' => 24,
                 'question_text' => 'What is the primary goal of CAS architecture?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-05-28 13:47:15',
                 'updated_at' => '2025-05-28 13:47:15',
             ),
-            347 => 
+            342 => 
             array (
                 'id' => 348,
                 'question_set_id' => 25,
             'question_text' => 'What is the primary goal of integrated marketing communications (IMC)?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:11',
                 'updated_at' => '2025-06-03 18:36:11',
             ),
-            348 => 
+            343 => 
             array (
                 'id' => 349,
                 'question_set_id' => 25,
                 'question_text' => 'Which of the following is NOT a common objective of advertising?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:11',
                 'updated_at' => '2025-06-03 18:36:11',
             ),
-            349 => 
+            344 => 
             array (
                 'id' => 350,
                 'question_set_id' => 25,
                 'question_text' => 'Which element of the promotional mix involves short-term incentives to encourage the purchase or sale of a product or service?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            350 => 
+            345 => 
             array (
                 'id' => 351,
                 'question_set_id' => 25,
             'question_text' => 'What is the main goal of Public Relations (PR)?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            351 => 
+            346 => 
             array (
                 'id' => 352,
                 'question_set_id' => 25,
                 'question_text' => 'In the context of managing the sales function, what does \'sales forecasting\' primarily involve?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            352 => 
+            347 => 
             array (
                 'id' => 353,
                 'question_set_id' => 25,
                 'question_text' => 'Which of the following is a key decision area in managing the distribution function?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            353 => 
+            348 => 
             array (
                 'id' => 354,
                 'question_set_id' => 25,
                 'question_text' => 'What is the term for the activities involved in selling goods or services directly to final consumers for their personal, non-business use?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            354 => 
+            349 => 
             array (
                 'id' => 355,
                 'question_set_id' => 25,
                 'question_text' => 'Which of the following is a key function of retail management?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            355 => 
+            350 => 
             array (
                 'id' => 356,
                 'question_set_id' => 25,
                 'question_text' => 'Which marketing approach relies on communicating directly with individual customers or carefully targeted sets of customers, often on a one-to-one, interactive basis?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            356 => 
+            351 => 
             array (
                 'id' => 357,
                 'question_set_id' => 25,
                 'question_text' => 'Which of the following is a key characteristic of direct marketing?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            357 => 
+            352 => 
             array (
                 'id' => 358,
                 'question_set_id' => 25,
                 'question_text' => 'In a sales pitch, what is the purpose of the "approach" stage?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            358 => 
+            353 => 
             array (
                 'id' => 359,
                 'question_set_id' => 25,
                 'question_text' => 'Which of the following is NOT typically considered a type of sales promotion?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            359 => 
+            354 => 
             array (
                 'id' => 360,
                 'question_set_id' => 25,
                 'question_text' => 'What is the purpose of setting sales quotas?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            360 => 
+            355 => 
             array (
                 'id' => 361,
                 'question_set_id' => 25,
                 'question_text' => 'Which of these is a type of distribution channel?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            361 => 
+            356 => 
             array (
                 'id' => 362,
                 'question_set_id' => 25,
                 'question_text' => 'What is the term for when a retailer purchases goods from a supplier?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            362 => 
+            357 => 
             array (
                 'id' => 363,
                 'question_set_id' => 25,
                 'question_text' => 'What is a key focus of retail management in the area of customer service?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            363 => 
+            358 => 
             array (
                 'id' => 364,
                 'question_set_id' => 25,
                 'question_text' => 'What is a key advantage of direct marketing for businesses?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            364 => 
+            359 => 
             array (
                 'id' => 365,
                 'question_set_id' => 25,
                 'question_text' => 'Which of the following is an example of a direct marketing communication channel?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            365 => 
+            360 => 
             array (
                 'id' => 366,
                 'question_set_id' => 25,
                 'question_text' => 'In a sales pitch, what should a salesperson do after identifying the customer\'s needs?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            366 => 
+            361 => 
             array (
                 'id' => 367,
                 'question_set_id' => 25,
                 'question_text' => 'What does a company\'s distribution strategy involve?',
                 'correct_answer' => 'C',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            367 => 
+            362 => 
             array (
                 'id' => 368,
                 'question_set_id' => 25,
                 'question_text' => 'Which promotional strategy involves generating a buzz through word-of-mouth marketing?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            368 => 
+            363 => 
             array (
                 'id' => 369,
                 'question_set_id' => 25,
                 'question_text' => 'Which function focuses on building relationships with customers to create loyalty?',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            369 => 
+            364 => 
             array (
                 'id' => 370,
                 'question_set_id' => 25,
                 'question_text' => 'A pull promotional strategy focuses on:',
                 'correct_answer' => 'A',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            370 => 
+            365 => 
             array (
                 'id' => 371,
                 'question_set_id' => 25,
                 'question_text' => 'A push promotional strategy focuses on:',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
             ),
-            371 => 
+            366 => 
             array (
                 'id' => 372,
                 'question_set_id' => 25,
                 'question_text' => 'What is the primary purpose of public relations?',
                 'correct_answer' => 'B',
+                'deleted_at' => NULL,
                 'created_at' => '2025-06-03 18:36:12',
                 'updated_at' => '2025-06-03 18:36:12',
-            ),
-            372 => 
-            array (
-                'id' => 373,
-                'question_set_id' => 26,
-                'question_text' => 'What is the primary goal of Business Continuity planning?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:42',
-                'updated_at' => '2025-06-03 20:15:42',
-            ),
-            373 => 
-            array (
-                'id' => 374,
-                'question_set_id' => 26,
-                'question_text' => 'Which of the following is NOT a key phase in the Business Continuity Planning lifecycle?',
-                'correct_answer' => 'D',
-                'created_at' => '2025-06-03 20:15:42',
-                'updated_at' => '2025-06-03 20:15:42',
-            ),
-            374 => 
-            array (
-                'id' => 375,
-                'question_set_id' => 26,
-                'question_text' => 'Which term describes the amount of data loss that is acceptable during a disruption?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:42',
-                'updated_at' => '2025-06-03 20:15:42',
-            ),
-            375 => 
-            array (
-                'id' => 376,
-                'question_set_id' => 26,
-            'question_text' => 'A Business Impact Analysis (BIA) primarily focuses on:',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            376 => 
-            array (
-                'id' => 377,
-                'question_set_id' => 26,
-                'question_text' => 'Which of the following is a critical component of information availability?',
-                'correct_answer' => 'A',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            377 => 
-            array (
-                'id' => 378,
-                'question_set_id' => 26,
-                'question_text' => 'What type of failure analysis involves identifying the root cause of a past disruption to prevent future occurrences?',
-                'correct_answer' => 'C',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            378 => 
-            array (
-                'id' => 379,
-                'question_set_id' => 26,
-                'question_text' => 'What is the purpose of a backup in business continuity?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            379 => 
-            array (
-                'id' => 380,
-                'question_set_id' => 26,
-                'question_text' => 'Which backup consideration is MOST important when dealing with large datasets?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            380 => 
-            array (
-                'id' => 381,
-                'question_set_id' => 26,
-                'question_text' => 'What does "granularity" refer to in the context of backups?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            381 => 
-            array (
-                'id' => 382,
-                'question_set_id' => 26,
-                'question_text' => 'What is the primary goal of a data recovery strategy?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            382 => 
-            array (
-                'id' => 383,
-                'question_set_id' => 26,
-                'question_text' => 'Which of the following is an offsite backup method?',
-                'correct_answer' => 'C',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            383 => 
-            array (
-                'id' => 384,
-                'question_set_id' => 26,
-                'question_text' => 'Which backup method creates a full copy of all data at regular intervals?',
-                'correct_answer' => 'C',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            384 => 
-            array (
-                'id' => 385,
-                'question_set_id' => 26,
-                'question_text' => 'What is the key advantage of incremental backups over full backups?',
-                'correct_answer' => 'C',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            385 => 
-            array (
-                'id' => 386,
-                'question_set_id' => 26,
-                'question_text' => 'Which backup topology involves backing up data to a central server from multiple client machines?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            386 => 
-            array (
-                'id' => 387,
-                'question_set_id' => 26,
-                'question_text' => 'Which technology is commonly used for creating point-in-time copies of data for backup and recovery?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            387 => 
-            array (
-                'id' => 388,
-                'question_set_id' => 26,
-                'question_text' => 'What is the primary purpose of data replication in business continuity?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            388 => 
-            array (
-                'id' => 389,
-                'question_set_id' => 26,
-                'question_text' => 'Which of the following is a characteristic of differential backups?',
-                'correct_answer' => 'A',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            389 => 
-            array (
-                'id' => 390,
-                'question_set_id' => 26,
-                'question_text' => 'What is the most critical step after restoring data from a backup?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            390 => 
-            array (
-                'id' => 391,
-                'question_set_id' => 26,
-                'question_text' => 'Which of the following is a benefit of using cloud-based backup solutions?',
-                'correct_answer' => 'A',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            391 => 
-            array (
-                'id' => 392,
-                'question_set_id' => 26,
-                'question_text' => 'Which of the following is an example of a hot site?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            392 => 
-            array (
-                'id' => 393,
-                'question_set_id' => 26,
-                'question_text' => 'What is the main objective of regular backup testing?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            393 => 
-            array (
-                'id' => 394,
-                'question_set_id' => 26,
-                'question_text' => 'Which of the following is NOT a typical consideration when choosing a backup solution?',
-                'correct_answer' => 'D',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            394 => 
-            array (
-                'id' => 395,
-                'question_set_id' => 26,
-                'question_text' => 'What is the purpose of archiving data?',
-                'correct_answer' => 'B',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            395 => 
-            array (
-                'id' => 396,
-                'question_set_id' => 26,
-                'question_text' => 'Which disaster recovery strategy involves moving operations to a secondary site after a failure?',
-                'correct_answer' => 'D',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
-            ),
-            396 => 
-            array (
-                'id' => 397,
-                'question_set_id' => 26,
-                'question_text' => 'What does the abbreviation MTTR stand for in the context of business continuity?',
-                'correct_answer' => 'C',
-                'created_at' => '2025-06-03 20:15:43',
-                'updated_at' => '2025-06-03 20:15:43',
             ),
         ));
         

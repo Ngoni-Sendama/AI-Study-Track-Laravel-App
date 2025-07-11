@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('flash_cards', function (Blueprint $table) {
+        Schema::create('flash_card_questions', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('subject_id');
-            $table->string('name');
-            $table->json('topics');
+            $table->foreignId('flash_card_id');
+            $table->string('question');
+            $table->text('answer');
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('flash_cards');
+        Schema::dropIfExists('flash_card_questions');
     }
 };

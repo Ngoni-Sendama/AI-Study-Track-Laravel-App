@@ -22,11 +22,10 @@ class DatabaseSeeder extends Seeder
         $this->call(QuestionSetsTableSeeder::class);
         $this->call(QuestionsTableSeeder::class);
         $this->call(OptionsTableSeeder::class);
-        $this->call(ExamAnswersTableSeeder::class);
         $this->call(PermissionsTableSeeder::class);
         $this->call(ModelHasPermissionsTableSeeder::class);
-        $this->call(ModelHasRolesTableSeeder::class);
         $this->call(RolesTableSeeder::class);
+        $this->call(ModelHasRolesTableSeeder::class);
         $this->call(RoleHasPermissionsTableSeeder::class);
     }
 }

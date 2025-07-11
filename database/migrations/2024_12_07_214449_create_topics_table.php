@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('topics', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('subject_id');
+            $table->foreignId('subject_id')->constrained()->onDelete('cascade');
             $table->string('unit')->nullable();
             $table->string('topics')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

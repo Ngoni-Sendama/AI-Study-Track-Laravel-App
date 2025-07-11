@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('question_set_id')->constrained()->onDelete('cascade');
             $table->string('question_text');
-            $table->string('correct_answer')->nullable();        
+            $table->string('correct_answer')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

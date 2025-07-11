@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Spatie\Activitylog\LogOptions;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\Activitylog\Traits\LogsActivity;
 
 class ExamAnswer extends Model
 {
-    use LogsActivity;
+    use LogsActivity, SoftDeletes;
     
     protected $fillable = [
         'user_id',
