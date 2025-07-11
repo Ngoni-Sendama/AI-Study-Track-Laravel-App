@@ -13,10 +13,6 @@ Route::post('/chat/clear', function () {
     return redirect()->route('chat');
 })->name('chat.clear');
 
-
-
-
-
 // Filament View
 Route::get('/exam-writing/{exam}-/codewithngoni', ExamWriting::class)->name('exam-writing');
 Route::get('/exam-answers/{examId}-/codewithngoni', ExamAnswer::class)->name('exam-answers');
