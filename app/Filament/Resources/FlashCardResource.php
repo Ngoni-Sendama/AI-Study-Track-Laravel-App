@@ -64,15 +64,15 @@ class FlashCardResource extends Resource
                             ),
 
 
-                            Section::make()
+                        Section::make()
                             ->visibleOn('view')
                             ->schema([
                                 Repeater::make('questions')
-                                ->relationship('questions')
-                                ->schema([
-                                           Forms\Components\TextInput::make('question'),
-                                           Forms\Components\TextInput::make('answer'),
-                                ])
+                                    ->relationship('questions')
+                                    ->schema([
+                                        Forms\Components\TextInput::make('question'),
+                                        Forms\Components\TextInput::make('answer'),
+                                    ])
 
                             ])
                     ])
@@ -111,16 +111,32 @@ class FlashCardResource extends Resource
 
                 Tables\Actions\Action::make('generate')
                     ->label('Generate Flashcards')
-                    ->color('success')
+                    ->color('info')
                     ->icon('heroicon-o-sparkles')
+                    ->modalIcon('hugeicons-cards-02')
+                    ->button()
+                    ->hidden(fn(FlashCard $record) => $record->questions()->exists())
                     ->requiresConfirmation()
-                    ->action(function ($record) {
+                    ->form([
+                        Forms\Components\Select::make('number')
+                            ->required()
+                            ->label('Number of Flash Cards')
+                            ->options([
+                                3 => 3,
+                                4 => 4,
+                                5 => 5,
+                                6 => 6,
+                            ]),
+                    ])
+                    ->action(function (array $data, $record) {
                         // Prepare prompt based on subject and topics
+                        $count = $data['number'];
+
                         $subject = $record->subject->name;
                         $topics = implode(', ', $record->topics);
 
                         $prompt = <<<EOT
-                            Generate 5 simple flashcard-style questions and answers based on the subject "$subject" and the following topics: $topics.
+                            Generate $count simple flashcard-style questions and answers based on the subject "$subject" and the following topics: $topics.
 
                             Respond in JSON format like this:
                             [
@@ -163,11 +179,12 @@ class FlashCardResource extends Resource
 
                         \Filament\Notifications\Notification::make()
                             ->title('Flashcards Generated')
-                            ->body('5 flashcard questions have been added.')
+                            ->body($count. ' flashcard questions have been added.')
                             ->success()
                             ->send();
                     }),
             ])
+            ->defaultSort('created_at', 'desc')
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
                     Tables\Actions\DeleteBulkAction::make(),
