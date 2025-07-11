@@ -79,104 +79,93 @@ class ExamResource extends Resource
             ]);
     }
 
-    public static function generateExamQuestions(Exam $exam): array
+ 
+
+    public static function generateExamOpenAI(Exam $exam): array
     {
-        // Prepare the question prompt
-        $questionPrompt = "Generate 25 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'. Please be accurate. Use example below:
+        $prompt = "Generate 10 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'. Add a short explanation after the answer. Use the example format below:
+                    
+                **Question 5:**
+                Iterative development involves:
+                (A) Releasing a complete software product before testing
+                (B) Incremental development and feedback loops
+                (C) Developing a detailed plan before any coding
+                (D) Using a single coding language  
+                **Answer: B (Because iterative development focuses on feedback and refinement in small increments.)**
+
+                Use the following topics: " . implode(', ', $exam->topics) .
+            (!empty($exam->notes) ? ' and refer to the notes: ' . implode(', ', $exam->notes) : '');
+
+        try {
+            $response = Http::withHeaders([
+                'Authorization' => 'Bearer ' . env('OPENAI_API_KEY'),
+                'Content-Type' => 'application/json',
+            ])
+                ->timeout(60)
+                ->post('https://api.openai.com/v1/chat/completions', [
+                    'model' => 'gpt-4',
+                    'messages' => [
+                        [
+                            'role' => 'user',
+                            'content' => $prompt,
+                        ],
+                    ],
+                    'temperature' => 0.7,
+                ]);
+
+            $content = $response->json('choices.0.message.content');
+
+            if (!$content) {
+                return ['success' => false, 'message' => 'Failed to generate questions from OpenAI.'];
+            }
+
+            preg_match_all('/\*\*Question (\d+):\*\*\s*(.*?)\s*\(A\)\s*(.*?)\s*\(B\)\s*(.*?)\s*\(C\)\s*(.*?)\s*\(D\)\s*(.*?)\s*\*\*Answer:\s*([A-D])\s*\((.*?)\)/s', $content, $matches, PREG_SET_ORDER);
+
+            if (empty($matches)) {
+                return ['success' => false, 'message' => 'Failed to parse questions from OpenAI response.'];
+            }
+
+            $questionSet = QuestionSet::create(['exam_id' => $exam->id]);
+
+            foreach ($matches as $match) {
+                [$_, $num, $text, $a, $b, $c, $d, $answer, $explanation] = $match;
+
+                $question = Question::create([
+                    'question_set_id' => $questionSet->id,
+                    'question_text' => $text,
+                    'correct_answer' => $answer,
+                    'explanation' => $explanation ?? null,
+                ]);
+
+                foreach (['A' => $a, 'B' => $b, 'C' => $c, 'D' => $d] as $key => $val) {
+                    Option::create([
+                        'question_id' => $question->id,
+                        'option_text' => $val,
+                        'is_correct' => $key === $answer,
+                    ]);
+                }
+            }
+
+            return ['success' => true, 'message' => 'Questions generated and stored successfully via OpenAI.'];
+        } catch (\Exception $e) {
+            return ['success' => false, 'message' => 'Error: ' . $e->getMessage()];
+        }
+    }
+
+
+
+    public static function generateExamMistral(Exam $exam): array
+    {
+                $prompt = "Generate 10 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'. Please be accurate. Use example below:
         **Question 5:**
             Iterative development involves:
             (A) Releasing a complete software product before testing
             (B) Incremental development and feedback loops
             (C) Developing a detailed plan before any coding
             (D) Using a single coding language
-            **Answer: B (Explain why answer is this option) Please validate the answers**  
+        **Answer: B (Explain why answer is this option) Please validate the answers**
 
         Use the following topics: " . implode(', ', $exam->topics) .
-            (!empty($exam->notes) ? ' and refer to the notes: ' . implode(', ', $exam->notes) : '');
-
-        try {
-            $response = Http::withHeaders([
-                'Content-Type' => 'application/json',
-            ])->post('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=' . env('GEMINI_API_KEY'), [
-                'contents' => [
-                    [
-                        'parts' => [
-                            ['text' => $questionPrompt]
-                        ]
-                    ]
-                ]
-            ]);
-
-            $responseBody = $response->json();
-            $responseText = $responseBody['candidates'][0]['content']['parts'][0]['text'] ?? '';
-
-            if (empty($responseText)) {
-                // Log::error('Failed to generate questions for Exam ID: ' . $exam->id);
-                return ['success' => false, 'message' => 'Failed to generate questions.'];
-            }
-
-            // Log::info('Generated questions for Exam ID: ' . $exam->id . "\n" . $responseText);
-
-            // Parse the response into questions
-            preg_match_all('/\*\*Question (\d+):\*\*\s*(.*?)\s*\(A\)\s*(.*?)\s*\(B\)\s*(.*?)\s*\(C\)\s*(.*?)\s*\(D\)\s*(.*?)\s*\*\*Answer:\s*([A-D])\b/s', $responseText, $matches, PREG_SET_ORDER);
-
-            if (empty($matches)) {
-                // Log::error('Failed to parse questions or answers from response text.');
-                return ['success' => false, 'message' => 'Failed to parse questions or answers.'];
-            }
-
-            // Create a new question set
-            $questionSet = QuestionSet::create(['exam_id' => $exam->id]);
-
-            foreach ($matches as $match) {
-                list($fullMatch, $questionNumber, $questionText, $optionA, $optionB, $optionC, $optionD, $correctAnswer) = $match;
-
-                // Create question record
-                $newQuestion = Question::create([
-                    'question_set_id' => $questionSet->id,
-                    'question_text' => $questionText,
-                    'correct_answer' => $correctAnswer,
-                ]);
-
-                // Store options
-                $options = [
-                    'A' => $optionA,
-                    'B' => $optionB,
-                    'C' => $optionC,
-                    'D' => $optionD
-                ];
-
-                foreach ($options as $optionKey => $optionText) {
-                    Option::create([
-                        'question_id' => $newQuestion->id,
-                        'option_text' => $optionText,
-                        'is_correct' => ($optionKey === $correctAnswer) ? 1 : 0,
-                    ]);
-                }
-            }
-
-            return ['success' => true, 'message' => 'Questions generated and stored successfully!'];
-        } catch (\Exception $e) {
-            // Log::error('Error generating exam: ' . $e->getMessage());
-            return ['success' => false, 'message' => 'An unexpected error occurred.'];
-        }
-    }
-
-
-   
-
-    public static function generateExamMistral(Exam $exam): array
-    {
-        $prompt = "Generate 10 multiple-choice questions with 4 options (A-D). Below each question, include the correct answer in the format: 'Answer: [A-D]'. Please be accurate. Use example below:
-**Question 5:**
-    Iterative development involves:
-    (A) Releasing a complete software product before testing
-    (B) Incremental development and feedback loops
-    (C) Developing a detailed plan before any coding
-    (D) Using a single coding language
-**Answer: B (Explain why answer is this option) Please validate the answers**
-
-Use the following topics: " . implode(', ', $exam->topics) .
             (!empty($exam->notes) ? ' and refer to the notes: ' . implode(', ', $exam->notes) : '');
 
         try {
@@ -283,7 +272,7 @@ Use the following topics: " . implode(', ', $exam->topics) .
                     ->hidden(fn(Exam $record) => $record->questionSets()->exists()),
                 Tables\Actions\Action::make('generate1')
                     ->hidden(fn(Exam $record) => $record->questionSets()->exists())
-                    ->label('Generate Exam Using Gemini')
+                    ->label('Generate Exam Using OpenAi')
                     ->color('button1')
                     ->link()
                     ->modalIcon('heroicon-o-check-badge')
@@ -294,7 +283,7 @@ Use the following topics: " . implode(', ', $exam->topics) .
                     ->modalSubmitActionLabel('Yes, Generate')
                     ->action(function (Exam $record) use ($table) {
                         try {
-                            $result = self::generateExamQuestions($record);
+                            $result = self::generateExamOpenAI($record);
 
                             if (!$result['success']) {
                                 Notification::make()

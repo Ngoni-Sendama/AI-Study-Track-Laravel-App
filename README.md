@@ -35,9 +35,10 @@ more images check them [here](./images/)
 - [x] Allow users to select subject, units, topics, exam. Generate MCQs exams using AI, (Input: Subject, units, topics, .)
 - [x] Exam interface, Multiple choice loop
 - [x] Mark answers, and generate scores
-- [ ] Study Session Page, Mark Syllabus, units, topics and notes
-- [ ] Generate Flashcard using AI (OpenAI or Geminni) only key points
+- [ ] Study Session Page, Mark things done Syllabus, units, topics and notes
+- [x] Generate Flashcard using AI (OpenAI or Geminni) only key points
 - [ ] Summarize Notes using AI
+- [ ] CHat with Notes
 - [ ] Use AI to show weak areas (units/topics with poor performance). And Study Recommendations
 - [ ] Exams Perfomance, Subject Perfomance, Best Marks Perfomance, Next Date Exam, Topics with weaknesses
 - [ ] Send Alerts
