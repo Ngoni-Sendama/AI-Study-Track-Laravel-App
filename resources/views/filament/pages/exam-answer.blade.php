@@ -54,7 +54,10 @@
                             @endphp
                         @endif
                     </li>
+                    <!-- Inside each question -->
+                 
                 @endforeach
+                   @livewire('explain-question', ['question' => $question], key($question->id))
             </ul>
         @endforeach
     @endforeach
