@@ -3,62 +3,58 @@
 namespace App\Filament\Widgets;
 
 use App\Models\Subject;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 
 class MarksGraph extends ApexChartWidget
 {
-    /**
-     * Chart Id
-     *
-     * @var string
-     */
     protected static ?string $chartId = 'marksGraph';
+    protected static ?string $heading = 'Average Marks by Subject';
 
-    /**
-     * Widget Title
-     *
-     * @var string|null
-     */
-    protected static ?string $heading = 'Average Marks Graph';
 
-    /**
-     * Chart options (series, labels, types, size, animations...)
-     * https://apexcharts.com/docs/options
-     *
-     * @return array
-     */
     protected function getOptions(): array
     {
-        $subjects = Subject::where('user_id', Auth::id())->pluck('name');
+        $subjects = Subject::where('user_id', Auth::id())->with('exams')->get();
+
+        $labels = [];
+        $averages = [];
+
+        foreach ($subjects as $subject) {
+            $labels[] = Str::limit($subject->name, 20);
+            $average = $subject->exams()->avg('marks');
+            $averages[] = round($average ?? 0, 2);
+        }
+
+        // Check if there's any actual data
+        $hasData = collect($averages)->filter(fn($mark) => $mark > 0)->isNotEmpty();
+
         return [
             'chart' => [
                 'type' => 'bar',
                 'height' => 300,
             ],
-            'series' => [
-                [
-                    'name' => 'MarksGraph',
-                    'data' => [60, 40, 40, 76, 30],
-                ],
-            ],
+            'series' => $hasData
+                ? [['name' => 'Average Marks (%)', 'data' => $averages]]
+                : [],
             'xaxis' => [
-                'categories' =>  ['CAP 486', 'CAP 314' ,'MKT 201', 'CAP 663', 'PEA 204'],
-                // 'categories' =>  $subjects->toArray(),
-                'labels' => [
-                    'style' => [
-                        'fontFamily' => 'inherit',
-                    ],
-                ],
+                'categories' => $labels,
+                'labels' => ['style' => ['fontFamily' => 'inherit']],
             ],
             'yaxis' => [
-                'labels' => [
-                    'style' => [
-                        'fontFamily' => 'inherit',
-                    ],
+                'labels' => ['style' => ['fontFamily' => 'inherit']],
+                'max' => 100,
+            ],
+            'colors' => ['#6366f1'],
+            'noData' => [
+                'text' => 'No data at the moment.',
+                'align' => 'center',
+                'verticalAlign' => 'middle',
+                'style' => [
+                    'fontSize' => '16px',
+                    'color' => '#999',
                 ],
             ],
-            'colors' => ['#f59e0b'],
         ];
     }
 }

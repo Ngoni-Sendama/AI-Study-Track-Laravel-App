@@ -2,45 +2,42 @@
 
 namespace App\Filament\Widgets;
 
+use App\Models\Exam;
+use Illuminate\Support\Facades\Auth;
 use Leandrocfe\FilamentApexCharts\Widgets\ApexChartWidget;
 
 class ExamsPerfomance extends ApexChartWidget
 {
-    /**
-     * Chart Id
-     *
-     * @var string
-     */
     protected static ?string $chartId = 'examsPerfomance';
+    protected static ?string $heading = 'Your Exam Performance';
 
-    /**
-     * Widget Title
-     *
-     * @var string|null
-     */
-    protected static ?string $heading = 'ExamsPerfomance';
-
-    /**
-     * Chart options (series, labels, types, size, animations...)
-     * https://apexcharts.com/docs/options
-     *
-     * @return array
-     */
     protected function getOptions(): array
     {
+        $exams = Exam::query()
+            ->where('user_id', Auth::id())
+            ->latest()
+            ->take(10)
+            ->get()
+            ->reverse();
+
+        $marks = $exams->pluck('marks')->map(fn($m) => round($m, 2))->toArray();
+        $labels = $exams->map(
+            fn($exam, $index) =>
+                \Illuminate\Support\Str::limit($exam->subject?->name ?? 'Exam ' . ($index + 1), 15)
+        )->toArray();
+
+        $hasData = collect($marks)->filter(fn($m) => $m > 0)->isNotEmpty();
+
         return [
             'chart' => [
                 'type' => 'area',
                 'height' => 350,
             ],
-            'series' => [
-                [
-                    'name' => 'ExamsPerfomance',
-                    'data' => [70, 66, 60, 80, 50],
-                ],
-            ],
+            'series' => $hasData
+                ? [[ 'name' => 'Marks (%)', 'data' => $marks ]]
+                : [],
             'xaxis' => [
-                'categories' => ['Exam1', 'Exam2', 'Exam3', 'Exam4', 'Exam5'],
+                'categories' => $labels,
                 'labels' => [
                     'style' => [
                         'fontFamily' => 'inherit',
@@ -52,14 +49,25 @@ class ExamsPerfomance extends ApexChartWidget
                     'style' => [
                         'fontFamily' => 'inherit',
                     ],
+                    'formatter' => 'function (val) { return val + "%"; }',
                 ],
+                'max' => 100,
             ],
-            'colors' => ['#f59e0b'],
+            'colors' => ['#10b981'],
             'stroke' => [
                 'curve' => 'smooth',
             ],
             'dataLabels' => [
-                'enabled' => false,
+                'enabled' => true,
+            ],
+            'noData' => [
+                'text' => 'No data at the moment.',
+                'align' => 'center',
+                'verticalAlign' => 'middle',
+                'style' => [
+                    'fontSize' => '16px',
+                    'color' => '#999',
+                ],
             ],
         ];
     }

@@ -20,9 +20,16 @@ class StatsOverview extends BaseWidget
         $average = Exam::whereNotNull('marks')->avg('marks');
 
         return [
-            Stat::make('Last Exam Mark', '80%')
-                ->description('Next Exam: 22 Apri')
-                ->color('danger'),
+            Stat::make('Last Exam Mark', function () {
+                $lastExam = Exam::where('user_id', auth()->id())
+                    ->latest('date') // or use 'created_at' if 'date' is nullable
+                    ->first();
+
+                return $lastExam ? round($lastExam->marks) . '%' : 'No Data';
+            })
+                ->description('Most recent exam performance')
+                ->color('success')
+                ,
             Stat::make('Average Exam Mark', number_format($average, 2) . '%'),
             Stat::make('Exams', Exam::count()),
         ];

@@ -18,10 +18,10 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersTableSeeder::class);
         $this->call(SubjectsTableSeeder::class);
         $this->call(TopicsTableSeeder::class);
-        $this->call(ExamsTableSeeder::class);
-        $this->call(QuestionSetsTableSeeder::class);
-        $this->call(QuestionsTableSeeder::class);
-        $this->call(OptionsTableSeeder::class);
+        // $this->call(ExamsTableSeeder::class);
+        // $this->call(QuestionSetsTableSeeder::class);
+        // $this->call(QuestionsTableSeeder::class);
+        // $this->call(OptionsTableSeeder::class);
         $this->call(PermissionsTableSeeder::class);
         $this->call(ModelHasPermissionsTableSeeder::class);
         $this->call(RolesTableSeeder::class);
@@ -29,3 +29,4 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleHasPermissionsTableSeeder::class);
     }
 }
+    
