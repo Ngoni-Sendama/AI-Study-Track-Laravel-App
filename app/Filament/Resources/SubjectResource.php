@@ -15,8 +15,10 @@ use Filament\Support\Enums\Alignment;
 use Filament\Forms\Components\Section;
 use Filament\Forms\Components\Checkbox;
 use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\Layout\Stack;
 use Illuminate\Database\Eloquent\Builder;
+use  Filament\Forms\Components\FileUpload;
 use App\Filament\Resources\SubjectResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Hugomyb\FilamentMediaAction\Tables\Actions\MediaAction;
@@ -42,7 +44,7 @@ class SubjectResource extends Resource
             ->schema([
                 Hidden::make('user_id')
                     ->default(Auth::id()),
-                Forms\Components\TextInput::make('name')
+                TextInput::make('name')
                     ->columnSpanFull()
                     ->disabledOn('edit')
                     ->required(),
@@ -51,7 +53,7 @@ class SubjectResource extends Resource
                     ->minHeight('70svh')
                     ->columnSpanFull()
                     ->visible((fn($record) => $record->syllabus)),
-                Forms\Components\FileUpload::make('syllabus')
+                FileUpload::make('syllabus')
                     ->columnSpanFull()
                     ->visibleOn('create')
                     ->preserveFilenames()
@@ -72,7 +74,7 @@ class SubjectResource extends Resource
                             ->required()
                             ->maxLength(255),
                         Forms\Components\Textarea::make('topics')
-                        ->rows(5),
+                            ->rows(5),
                     ]),
             ]);
     }

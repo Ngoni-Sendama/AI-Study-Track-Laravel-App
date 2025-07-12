@@ -2,14 +2,18 @@
 
 namespace App\Models;
 
+use App\Models\Topic;
+use Smalot\PdfParser\Parser;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Subject extends Model
 {
     use SoftDeletes;
-    
+
     protected $fillable = [
         'user_id',
         'name',
